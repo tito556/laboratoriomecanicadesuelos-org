@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Calculadora CBR desde DCP (DPI): Correlaciones TRRL/Kleyn para</title>
+
+<meta name="description" content="Estima CBR a partir del ensayo DCP con correlaciones TRRL, Kleyn y ERA. Herramienta de control rápido en subrasantes y bases para obras viales chilenas.">
+
+<meta name="theme-color" content="#0c3e44">
+
+<link rel="canonical" href="https://laboratoriomecanicadesuelos.org/calculadoras/cbr-dpi/">
+
+<meta property="og:type" content="article">
+
+<meta property="og:title" content="Calculadora CBR desde DCP (DPI): Correlaciones TRRL/Kleyn para">
+
+<meta property="og:description" content="Estima CBR a partir del ensayo DCP con correlaciones TRRL, Kleyn y ERA. Herramienta de control rápido en subrasantes y bases para obras viales chilenas.">
+
+<meta property="og:url" content="https://laboratoriomecanicadesuelos.org/blog/calculadoras/cbr-dpi/">
+
+
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%230A2540'/%3E%3Cpath d='M14 44 L24 30 L34 38 L44 22 L50 28' stroke='%23fff' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+
+
+
+
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "@id": "https://laboratoriomecanicadesuelos.org/blog/calculadoras/cbr-dpi/#article", "headline": "Calculadora CBR desde DCP (DPI): Correlaciones TRRL/Kleyn para Control Rápido en Pavimentos - Mecánica de Suelos Chile", "description": "Estima CBR a partir del ensayo DCP con correlaciones TRRL, Kleyn y ERA. Herramienta de control rápido en subrasantes y bases para obras viales chilenas.", "datePublished": "2026-05-26", "dateModified": "2026-05-26", "url": "https://laboratoriomecanicadesuelos.org/blog/calculadoras/cbr-dpi/", "inLanguage": "es", "author": {"@type": "Organization", "name": "Lab MS"}, "publisher": {"@type": "Organization", "name": "Lab MS", "url": "https://laboratoriomecanicadesuelos.org/"}, "about": {"@type": "Thing", "name": "CBR desde DCP (DPI): Correlaciones TRRL/Kleyn · Mecánica de Suelos"}, "keywords": ["calculadora geotécnica", "pavimentos", "cbr dpi", "Chile", "NCh 1508"]}</script>
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://laboratoriomecanicadesuelos.org/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://laboratoriomecanicadesuelos.org/blog/"}, {"@type": "ListItem", "position": 3, "name": "Calculadoras", "item": "https://laboratoriomecanicadesuelos.org/blog/calculadoras/"}, {"@type": "ListItem", "position": 4, "name": "Calculadora CBR desde DCP (DPI): Correlaciones TRRL/Kleyn pa", "item": "https://laboratoriomecanicadesuelos.org/blog/calculadoras/cbr-dpi/"}]}</script>
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "@id": "https://laboratoriomecanicadesuelos.org/blog/calculadoras/cbr-dpi/#webapp", "name": "Calculadora CBR desde DCP (DPI)", "description": "Estima CBR a partir del ensayo DCP con correlaciones TRRL, Kleyn y ERA. Herramienta de control rápido en subrasantes y bases para obras viales chilenas.", "applicationCategory": "EngineeringApplication", "applicationSubCategory": "Geotechnical Engineering Calculator", "operatingSystem": "Web", "url": "https://laboratoriomecanicadesuelos.org/blog/calculadoras/cbr-dpi/", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "inLanguage": "es"}</script>
+
+<style>
+
+:root{--primary:#0c3e44;--accent:#0891b2;--bg:#f7fafb;--surface:#fff;--text:#15252a;--border:#e2eaec;--muted:#64748b;--font-body:'Source Sans 3',-apple-system,sans-serif;--font-h:'Source Serif 4',Georgia,serif}
+
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{font-family:var(--font-body);line-height:1.65;color:#1f2937;background:var(--bg)}
+
+a{color:var(--accent);text-decoration:underline}
+
+.container{max-width:880px;margin:0 auto;padding:0 24px}
+
+header{background:var(--primary);color:#fff;padding:18px 0}
+
+header .container{display:flex;align-items:center;justify-content:space-between}
+
+header a{color:#fff;text-decoration:none}
+
+header .brand{font-family:var(--font-h);font-size:1.2rem;font-weight:700}
+
+header nav{display:flex;gap:16px;font-size:.92rem}
+
+.hero-calc{color:#fff;padding:60px 0 40px}
+
+.hero-calc h1{font-family:var(--font-h);font-size:2.0rem;margin-bottom:12px;line-height:1.2}
+
+.hero-calc .breadcrumb{font-size:.85rem;color:#cbd5e1;margin-bottom:16px}
+
+.hero-calc .breadcrumb a{color:#fff;text-decoration:underline}
+
+.hero-calc .meta{display:flex;gap:24px;color:#cbd5e1;font-size:.9rem;flex-wrap:wrap;margin-top:12px}
+
+.hero-calc .tipo-box{display:inline-block;background:rgba(255,255,255,.18);color:#fff;padding:6px 14px;border-radius:6px;font-weight:600;font-size:.95rem;margin-right:12px}
+
+main{padding:40px 0 60px}
+
+main h2{font-family:var(--font-h);font-size:1.5rem;color:var(--primary);margin:28px 0 14px;padding-bottom:6px;display:inline-block}
+
+main p{margin-bottom:14px;color:#1f2937}
+
+.formula-box{background:#0f172a;color:#fff;padding:24px;border-radius:8px;margin:20px 0;font-family:Consolas,monospace;font-size:1.05rem;text-align:center;overflow-x:auto;letter-spacing:.5px}
+
+.vars-list{background:#f8fafc;border-left:3px solid #1e3a5f;padding:14px 20px;margin:16px 0;border-radius:4px}
+
+.vars-list ul{margin:8px 0 0 24px}
+
+.vars-list li{margin-bottom:5px;font-size:.92rem}
+
+.ejemplo-box{background:#fef9c3;border-left:4px solid #ca8a04;padding:16px 20px;margin:20px 0;border-radius:4px}
+
+.normas-list{background:#dbeafe;border-left:4px solid #2563eb;padding:16px 20px;margin:20px 0;border-radius:4px}
+
+.normas-list ul{margin:8px 0 0 22px}
+
+.normas-list li{margin-bottom:5px;font-size:.92rem;color:#1e3a8a}
+
+.consideraciones-box{background:#ecfdf5;border-left:4px solid #059669;padding:16px 20px;margin:20px 0;border-radius:4px}
+
+.limitaciones-box{background:#fee2e2;border-left:4px solid #b91c1c;padding:16px 20px;margin:20px 0;border-radius:4px}
+
+.limitaciones-box ul{margin:8px 0 0 22px}
+
+.limitaciones-box li{margin-bottom:5px;font-size:.92rem;color:#7f1d1d}
+
+.cta-calc{background:var(--primary);color:#fff;padding:32px;border-radius:12px;text-align:center;margin:32px 0}
+
+.cta-calc h3{color:#fff;margin-bottom:8px;font-family:var(--font-h);font-size:1.3rem}
+
+.cta-calc p{color:#e5e7eb}
+
+.cta-calc a{display:inline-block;background:#0d9488;color:#fff;padding:14px 32px;border-radius:6px;text-decoration:none;font-weight:700;margin-top:16px;font-size:1.02rem}
+
+footer{background:#0f172a;color:#cbd5e1;padding:28px 0;font-size:.88rem;margin-top:40px}
+
+footer a{color:#fff}
+
+.hero-calc{background:linear-gradient(135deg,#1e3a3d,#0d4845)}</style>
+
+
+
+<style id="hero-img-cap-v3">
+
+section.block{overflow:auto}
+
+section.block .hero-img-wrap{float:right!important;max-width:340px!important;width:340px!important;max-height:280px!important;margin:6px 0 16px 24px!important;overflow:hidden;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,.10);display:block!important}
+
+section.block .hero-img-wrap img{max-width:100%!important;max-height:280px!important;width:100%!important;height:280px!important;object-fit:cover!important;display:block!important;border-radius:10px}
+
+.inline-img{float:right!important;max-width:300px!important;width:300px!important;max-height:220px!important;margin:6px 0 18px 20px!important;overflow:hidden;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,.10)}
+
+.inline-img img{max-width:100%!important;max-height:220px!important;width:100%!important;height:220px!important;object-fit:cover!important;display:block!important;border-radius:10px}
+
+section.block h2{clear:both;margin-top:0}
+
+@media (max-width:768px){
+
+  section.block{overflow:visible}
+
+  section.block .hero-img-wrap{float:none!important;width:100%!important;max-width:100%!important;max-height:240px!important;margin:18px auto!important}
+
+  section.block .hero-img-wrap img{height:240px!important;max-height:240px!important}
+
+  .inline-img{float:none!important;width:100%!important;max-width:100%!important;max-height:220px!important;margin:18px auto!important}
+
+}
+
+main img:not([class]){max-width:100%;height:auto}
+
+</style>
+
+<meta name="layout" content="L5">
+
+
+
+<style id="calc-embed-label-fix">
+
+.calc-embed-wrap .calc-widget label{display:block!important;font-size:.85rem;color:#334155;font-weight:600;margin-bottom:14px}
+
+.calc-embed-wrap .calc-widget label > input,
+
+.calc-embed-wrap .calc-widget label > select,
+
+.calc-embed-wrap .calc-widget label > textarea{display:block;width:100%;margin-top:6px;padding:8px 10px;border:1px solid #cbd5e1;border-radius:6px;font-size:.95rem;font-weight:400;box-sizing:border-box}
+
+.calc-embed-wrap .calc-widget label > input:focus,
+
+.calc-embed-wrap .calc-widget label > select:focus{outline:2px solid var(--accent);outline-offset:1px;border-color:var(--accent)}
+
+.calc-embed-wrap .calc-widget label sub{vertical-align:sub;font-size:.72em;line-height:1}
+
+.calc-embed-wrap .calc-widget label .calc-unit{margin-left:4px;color:#64748b;font-weight:400;font-size:.85em}
+
+.calc-embed-wrap .calc-widget label .calc-hint{display:block;margin-top:4px;font-size:.72rem;color:#94a3b8;font-weight:400;font-style:italic}
+
+.calc-embed-wrap .calc-widget .calc-grid,
+
+.calc-embed-wrap .calc-widget .calc-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px 18px;margin-bottom:18px}
+
+.calc-embed-wrap .calc-widget h3{margin:1.5rem 0 .8rem;font-size:1.05rem;color:var(--primary,#0a2540)}
+
+@media (max-width:640px){
+
+  .calc-embed-wrap .calc-widget .calc-grid,
+
+  .calc-embed-wrap .calc-widget .calc-row{grid-template-columns:1fr}
+
+}
+
+</style>
+
+
+
+
+
+<style id="ftr-fix">footer .container>div{min-width:0}footer p,footer a{overflow-wrap:anywhere;word-break:break-word}</style><!--selfhost-fonts--><link rel="preload" href="fonts/inter-400-latin.woff2" as="font" type="font/woff2" crossorigin fetchpriority="high"><style></style><style id="selfhost-fonts">body{font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif}</style></head>
+
+<body data-layout-variant="2">
+
+<header>
+
+<div class="container">
+
+<a href="/" class="brand">Lab MS</a>
+
+<nav><a href="/">Inicio</a><span>Sismos</span><span>Geotecnia</span><a href="/calculadoras/">Calculadoras</a></nav>
+
+</div>
+
+</header>
+
+
+
+<section class="hero-calc">
+
+<div class="container">
+
+<div class="breadcrumb"><a href="/">Inicio</a> › <span>Blog</span> › <a href="/calculadoras/">Calculadoras</a> › Calculadora CBR desde DCP (DPI): Correlaciones TRRL/Kle</div>
+
+<h1>Calculadora CBR desde DCP (DPI): Correlaciones TRRL/Kleyn para Control Rápido en Pavimentos - Mecánica de Suelos Chile</h1>
+
+<div class="meta">
+
+<span class="tipo-box">🧮 Calculadora · Pavimentos</span>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<main>
+
+
+
+<div class="container">
+
+
+
+<p style="font-size:1.05rem;line-height:1.7">En la mecánica de suelos chilena, el control de calidad de subrasantes y bases granulares es crítico para el desempeño de pavimentos. La calculadora CBR desde DCP (DPI) permite estimar el valor de California Bearing Ratio (CBR) a partir del ensayo de Penetración Dinámica de Cono (DCP), expresado como Índice de Penetración Dinámica (DPI en mm/golpe). Utiliza correlaciones reconocidas como las de TRRL (Transport and Road Research Laboratory), Kleyn y ERA (Empresa de Renovación y Asfaltado). Esta herramienta es ideal para controles rápidos en terreno, complementando ensayos de laboratorio y optimizando decisiones en obras viales, mineras y de edificación en Chile.</p>
+
+
+
+<h2>¿Cuándo se aplica?</h2>
+
+<p>Esta calculadora se aplica principalmente en proyectos viales para estimar la capacidad de soporte de subrasantes y bases granulares durante la construcción. En minería, se usa para evaluar pisos de botaderos y caminos de acarreo. También es útil en edificación para verificar plataformas de fundación y en obras portuarias para controlar terraplenes. En Chile, su empleo se ajusta a la normativa NCh 3171 (mecánica de suelos) y DS61 MINVU, permitiendo decisiones rápidas en terreno sin esperar ensayos de laboratorio prolongados.</p>
+
+
+
+<h2>Fórmula principal</h2>
+
+<div class="formula-box">CBR = 10^( (log(DPI) - a) / b )  donde a y b dependen de la correlación: TRRL (a=2.48, b=0.78), Kleyn (a=1.85, b=0.82), ERA (a=2.44, b=0.81)</div>
+
+
+
+<div class="vars-list">
+
+<strong>Variables:</strong>
+
+<ul><li>DPI: Índice de Penetración Dinámica (mm/golpe)</li><li>CBR: California Bearing Ratio (%)</li><li>a: intercepto de la correlación (adimensional)</li><li>b: pendiente de la correlación (adimensional)</li><li>Correlación: método TRRL, Kleyn o ERA</li><li>Tipo de suelo: granular, fino o mixto</li></ul>
+
+</div>
+
+
+
+<h2>Ejemplo numérico</h2>
+
+<div class="ejemplo-box">Supongamos un ensayo DCP en una subrasante granular con DPI promedio de 15 mm/golpe. Usando la correlación TRRL (a=2.48, b=0.78): log(CBR) = (log(15) - 2.48)/0.78 = (1.176 - 2.48)/0.78 = -1.672, entonces CBR = 10^(-1.672) = 2.1%. Este valor indica una subrasante de baja capacidad, requiriendo mejoramiento o mayor espesor de pavimento según normativa chilena.</div>
+
+
+
+<h2>Normativa aplicable</h2>
+
+<div class="normas-list">
+
+<ul><li>NCh 3171: Mecánica de suelos – Determinación del CBR</li><li>NCh 1508: Estudio de mecánica de suelos para diseño de pavimentos</li><li>DS61 MINVU: Reglamento de pavimentos para obras viales</li><li>ASTM D6951: Standard Test Method for DCP</li><li>Eurocode 7 (referencia internacional)</li></ul>
+
+</div>
+
+
+
+<h2>Consideraciones para proyectos en Chile</h2>
+
+<div class="consideraciones-box">En Chile, la alta sismicidad exige que los valores estimados de CBR se complementen con estudios de respuesta dinámica. Los suelos típicos varían desde arenas en el norte hasta arcillas expansivas en el sur, lo que afecta la aplicabilidad de cada correlación. Es práctica local calibrar las correlaciones TRRL/Kleyn con ensayos CBR directos para cada proyecto, especialmente en zonas volcánicas de la Araucanía. Además, el DS61 MINVU exige verificar la capacidad de soporte para tránsito pesado en rutas interurbanas.</div>
+
+
+
+<h2>Limitaciones del método</h2>
+
+<div class="limitaciones-box">
+
+<ul><li>Las correlaciones son empíricas y pueden no ser válidas para suelos muy cohesivos o con gravas gruesas.</li><li>El ensayo DCP solo mide resistencia a la penetración, no otras propiedades como compactación o humedad.</li><li>No reemplaza ensayos CBR de laboratorio para diseños definitivos; solo es herramienta de control rápido.</li></ul>
+
+</div>
+
+
+
+<!-- CALC_EMBED_v1 -->
+
+<div class="calc-embed-wrap">
+
+<div class="calc-embed-intro"><strong>🧮 Calculadora interactiva:</strong> usá los inputs para obtener resultados al instante. Gratis, sin registro.</div>
+
+<div class="calc-split-layout">
+
+<section class="calc-widget" aria-label="Calculadora interactiva de CBR desde DPI">
+
+<h2>Calcular en línea</h2>
+
+<p class="calc-intro">Ingresa el DPI (mm/golpe) y obtén el CBR estimado. <strong>El CBR mínimo de subrasante exigido se ajusta a la norma del país seleccionado a la derecha.</strong></p>
+
+<form id="calc-form" novalidate>
+
+<div class="calc-row">
+
+<label>DPI (mm/golpe)<input type="number" id="dpi" step="0.1" value="10.2" min="1" max="100" required></label>
+
+</div>
+
+<button type="submit">Calcular CBR</button>
+
+
+
+</form>
+
+<div id="calc-resultado" role="status" aria-live="polite"></div>
+
+<p class="calc-note" id="calc-note-fs">CBR mínimo subrasante y factor saturación según norma del país seleccionado.</p>
+
+</section>
+
+</div>
+
+</div>
+
+<style id="calc-embed-css-v1">.calc-embed-wrap{margin:32px 0;padding:0}.calc-embed-wrap .calc-split-layout{display:block}.calc-embed-wrap .calc-widget{margin:0}.calc-embed-wrap h2{margin-top:0;font-family:var(--font-h,inherit);color:var(--primary,#0A2540);font-size:1.35rem}.calc-embed-intro{background:#f0f9ff;border-left:4px solid #0d9488;padding:14px 20px;margin:0 0 16px;border-radius:4px;font-size:.95rem;color:#0c4a6e}.calc-embed-intro strong{color:#0d9488}</style>
+
+<style>
+
+.calc-widget{background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:1.25rem 1.5rem;margin:2rem 0;font-family:inherit}
+
+.calc-widget h2{margin:0 0 .5rem;font-size:1.15rem;color:#0f172a;border:0;padding:0}
+
+.calc-widget .calc-intro{margin:0 0 1rem;font-size:.88rem;color:#475569}
+
+.calc-widget .calc-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:.75rem;margin-bottom:1rem}
+
+.calc-widget label{display:flex;flex-direction:column;font-size:.82rem;color:#334155;font-weight:600}
+
+.calc-widget input,.calc-widget select{margin-top:.3rem;padding:.5rem .6rem;border:1px solid #cbd5e1;border-radius:6px;font-size:.92rem;font-family:inherit;background:#fff}
+
+.calc-widget input:focus,.calc-widget select:focus{outline:2px solid #0f766e;outline-offset:1px}
+
+.calc-widget button{background:#0f766e;color:#fff;border:0;padding:.6rem 1.4rem;border-radius:6px;font-weight:600;cursor:pointer;font-size:.92rem}
+
+.calc-widget button:hover{background:#115e59}
+
+.calc-widget #calc-resultado{margin-top:1rem;padding:.9rem 1rem;background:#fff;border-left:3px solid #0f766e;border-radius:4px;font-size:.92rem;min-height:1em}
+
+.calc-widget #calc-resultado:empty{display:none}
+
+.calc-widget #calc-resultado .ok{color:#166534;font-weight:700;font-size:1.02rem;display:block;margin-bottom:.3rem}
+
+.calc-widget #calc-resultado .err{color:#b91c1c;font-weight:600}
+
+.calc-widget .calc-note{margin:1rem 0 0;font-size:.78rem;color:#64748b;font-style:italic}
+
+</style>
+
+
+
+</div>
+
+</main>
+
+
+
+<footer>
+
+<div class="container">
+
+<p>&copy; 2026 Lab MS · <a href="/">Inicio</a> · <span>Blog sísmico</span> · <span>Blog geotécnico</span> · <a href="/calculadoras/">Calculadoras</a></p>
+
+<p style="font-size:.78rem;margin-top:8px;color:#94a3b8">Información con fines técnicos y educativos. Calculadora funcional alojada en Geotechnical Engineering AI.</p>
+
+</div>
+
+</footer>
+
+<script>
+
+(function(){
+
+var f=document.getElementById('calc-form');if(!f)return;
+
+function calcular(){
+
+  var dpi=parseFloat(document.getElementById('dpi').value);
+
+  var out=document.getElementById('calc-resultado');
+
+  var note=document.getElementById('calc-note-fs');
+
+  if(!isFinite(dpi)||dpi<=0){out.innerHTML='<span class="err">Ingresa valores numéricos positivos.</span>';return null;}
+
+
+
+  var CBRmin=7, CBRsubbase=25, fSat=0.7, citaPais='—', paisActual='?';
+
+  if(window.VisorNormas){
+
+    var p1=window.VisorNormas.getParam('CBR_min_subrasante');
+
+    var p2=window.VisorNormas.getParam('CBR_min_subbase');
+
+    var p3=window.VisorNormas.getParam('factor_saturacion');
+
+    if(typeof p1==='number'&&p1>0){CBRmin=p1;}
+
+    if(typeof p2==='number'&&p2>0){CBRsubbase=p2;}
+
+    if(typeof p3==='number'&&p3>0){fSat=p3;}
+
+    citaPais=window.VisorNormas.getNormaCita('CBR_min_subrasante')||'—';
+
+    paisActual=window.VisorNormas.getPais()||'?';
+
+  }
+
+
+
+  var CBR_situ=Math.pow(10,2.48-1.057*Math.log(dpi)/Math.LN10);
+
+  var CBR_diseno=CBR_situ*fSat;
+
+  var cat;
+
+  if(CBR_situ<3)cat='pobre';else if(CBR_situ<7)cat='regular';else if(CBR_situ<=20)cat='buena';else cat='excelente';
+
+  var apto = CBR_diseno >= CBRmin;
+
+  var icono = apto ? '✓' : '⚠';
+
+
+
+  var html='<span class="ok">CBR in-situ = '+CBR_situ.toFixed(1).replace('.',',')+' % · CBR diseño (saturado) = '+CBR_diseno.toFixed(1).replace('.',',')+' % · Subrasante: '+cat+'</span>';
+
+  html+='<span class="factors-line">DPI = '+dpi.toFixed(2).replace('.',',')+' mm/golpe · Factor saturación = '+fSat.toFixed(2)+' · Fórmula log10(CBR)=2.48−1.057·log10(DPI)</span>';
+
+  html+='<span class="info-line">'+icono+' '+paisActual+': CBR mínimo subrasante = '+CBRmin+'% → '+(apto?'CUMPLE':'NO CUMPLE — requiere mejoramiento o subbase mayor')+'</span>';
+
+  html+='<span class="info-line">📍 '+paisActual+' · Subbase mín = '+CBRsubbase+'% · '+citaPais+'</span>';
+
+  out.innerHTML=html;
+
+  if(note){note.textContent='Norma '+paisActual+': CBR mínimo subrasante = '+CBRmin+'% (saturado). Factor in-situ → saturado = '+fSat.toFixed(2)+'.';}
+
+  return {CBR_situ,CBR_diseno,CBRmin,CBRsubbase,fSat,paisActual,citaPais,apto,cat};
+
+}
+
+f.addEventListener('submit',function(e){e.preventDefault();calcular();});
+
+window.addEventListener('visor-normas:cambio-pais',function(){if(document.getElementById('calc-resultado').innerHTML.trim()!==''){calcular();}});
+
+
+
+}
+
+  });
+
+  window.VisorNormas._setPais(paisOriginal);
+
+  calcular();
+
+  var html='<button class="cmp-modal-close" aria-label="Cerrar">×</button>';
+
+  html+='<h3>Comparativa CBR-DPI entre 4 países</h3>';
+
+  html+='<p style="font-size:.85rem;color:#475569;margin:.4rem 0 .8rem">Misma medida DPI. CBR in-situ es universal; el factor de saturación y CBR mínimo varían entre países.</p>';
+
+  html+='<table class="cmp-table"><thead><tr><th>País</th><th>CBR in-situ (%)</th><th>Factor sat.</th><th>CBR diseño (%)</th><th>CBR mín subrasante</th><th>¿Cumple?</th><th>Norma</th></tr></thead><tbody>';
+
+  resultados.forEach(function(r){
+
+    var ok = r.apto ? '<span style="color:#166534;font-weight:700">✓ SÍ</span>' : '<span style="color:#b45309;font-weight:700">⚠ NO</span>';
+
+    html+='<tr><td><strong>'+r.label+'</strong></td><td>'+r.CBR_situ.toFixed(1)+'</td><td>'+r.fSat.toFixed(2)+'</td><td class="cmp-qadm">'+r.CBR_diseno.toFixed(1)+'</td><td>'+r.CBRmin+'</td><td>'+ok+'</td><td><span class="cmp-norma-cita">'+r.citaPais+'</span></td></tr>';
+
+  });
+
+  html+='</tbody></table>';
+
+  html+='<p style="font-size:.78rem;color:#64748b;margin-top:.8rem;font-style:italic">Chile (MOP) es el más exigente con CBR ≥ 7%; USA, ES y BR ronda 5-6%. Brasil es más conservador con factor saturación 0.6 (clima tropical). El mismo terreno puede pasar/no pasar según el país.</p>';
+
+  var ov=document.querySelector('.cmp-overlay');
+
+  if(!ov){ov=document.createElement('div');ov.className='cmp-overlay';ov.innerHTML='<div class="cmp-modal" role="dialog" aria-modal="true"></div>';document.body.appendChild(ov);ov.addEventListener('click',function(e){if(e.target===ov)ov.classList.remove('cmp-open');});}
+
+  ov.querySelector('.cmp-modal').innerHTML=html;
+
+  ov.querySelector('.cmp-modal-close').addEventListener('click',function(){ov.classList.remove('cmp-open');});
+
+  ov.classList.add('cmp-open');
+
+});
+
+})();
+
+
+
+</script>
+
+</body>
+
+</html>
+

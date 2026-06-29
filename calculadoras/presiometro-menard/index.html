@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Calculadora Presiómetro Ménard: PLim, EM y Capacidad Portante</title>
+
+<meta name="description" content="Interpreta ensayos presiométricos Ménard: presión límite, módulo presiométrico, capacidad portante y asentamiento según NF P94-261 y normativa chilena.">
+
+<meta name="theme-color" content="#0c3e44">
+
+<link rel="canonical" href="https://laboratoriomecanicadesuelos.org/calculadoras/presiometro-menard/">
+
+<meta property="og:type" content="article">
+
+<meta property="og:title" content="Calculadora Presiómetro Ménard: PLim, EM y Capacidad Portante">
+
+<meta property="og:description" content="Interpreta ensayos presiométricos Ménard: presión límite, módulo presiométrico, capacidad portante y asentamiento según NF P94-261 y normativa chilena.">
+
+<meta property="og:url" content="https://laboratoriomecanicadesuelos.org/blog/calculadoras/presiometro-menard/">
+
+
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%230A2540'/%3E%3Cpath d='M14 44 L24 30 L34 38 L44 22 L50 28' stroke='%23fff' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+
+
+
+
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "@id": "https://laboratoriomecanicadesuelos.org/blog/calculadoras/presiometro-menard/#article", "headline": "Calculadora Presiómetro Ménard: PLim, EM y Capacidad Portante para Suelos Chilenos", "description": "Interpreta ensayos presiométricos Ménard: presión límite, módulo presiométrico, capacidad portante y asentamiento según NF P94-261 y normativa chilena.", "datePublished": "2026-05-26", "dateModified": "2026-05-26", "url": "https://laboratoriomecanicadesuelos.org/blog/calculadoras/presiometro-menard/", "inLanguage": "es", "author": {"@type": "Organization", "name": "Lab MS"}, "publisher": {"@type": "Organization", "name": "Lab MS", "url": "https://laboratoriomecanicadesuelos.org/"}, "about": {"@type": "Thing", "name": "Presiómetro Ménard · Mecánica de Suelos"}, "keywords": ["calculadora geotécnica", "ensayos", "presiometro menard", "Chile", "NCh 1508"]}</script>
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://laboratoriomecanicadesuelos.org/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://laboratoriomecanicadesuelos.org/blog/"}, {"@type": "ListItem", "position": 3, "name": "Calculadoras", "item": "https://laboratoriomecanicadesuelos.org/blog/calculadoras/"}, {"@type": "ListItem", "position": 4, "name": "Calculadora Presiómetro Ménard: PLim, EM y Capacidad Portant", "item": "https://laboratoriomecanicadesuelos.org/blog/calculadoras/presiometro-menard/"}]}</script>
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "@id": "https://laboratoriomecanicadesuelos.org/blog/calculadoras/presiometro-menard/#webapp", "name": "Calculadora Presiómetro Ménard — PLim, EM, capacidad portante", "description": "Interpreta ensayos presiométricos Ménard: presión límite, módulo presiométrico, capacidad portante y asentamiento según NF P94-261 y normativa chilena.", "applicationCategory": "EngineeringApplication", "applicationSubCategory": "Geotechnical Engineering Calculator", "operatingSystem": "Web", "url": "https://laboratoriomecanicadesuelos.org/blog/calculadoras/presiometro-menard/", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "inLanguage": "es"}</script>
+
+<style>
+
+:root{--primary:#0c3e44;--accent:#0891b2;--bg:#f7fafb;--surface:#fff;--text:#15252a;--border:#e2eaec;--muted:#64748b;--font-body:'Source Sans 3',-apple-system,sans-serif;--font-h:'Source Serif 4',Georgia,serif}
+
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{font-family:var(--font-body);line-height:1.65;color:#1f2937;background:var(--bg)}
+
+a{color:var(--accent);text-decoration:underline}
+
+.container{max-width:880px;margin:0 auto;padding:0 24px}
+
+header{background:var(--primary);color:#fff;padding:18px 0}
+
+header .container{display:flex;align-items:center;justify-content:space-between}
+
+header a{color:#fff;text-decoration:none}
+
+header .brand{font-family:var(--font-h);font-size:1.2rem;font-weight:700}
+
+header nav{display:flex;gap:16px;font-size:.92rem}
+
+.hero-calc{color:#fff;padding:60px 0 40px}
+
+.hero-calc h1{font-family:var(--font-h);font-size:2.0rem;margin-bottom:12px;line-height:1.2}
+
+.hero-calc .breadcrumb{font-size:.85rem;color:#cbd5e1;margin-bottom:16px}
+
+.hero-calc .breadcrumb a{color:#fff;text-decoration:underline}
+
+.hero-calc .meta{display:flex;gap:24px;color:#cbd5e1;font-size:.9rem;flex-wrap:wrap;margin-top:12px}
+
+.hero-calc .tipo-box{display:inline-block;background:rgba(255,255,255,.18);color:#fff;padding:6px 14px;border-radius:6px;font-weight:600;font-size:.95rem;margin-right:12px}
+
+main{padding:40px 0 60px}
+
+main h2{font-family:var(--font-h);font-size:1.5rem;color:var(--primary);margin:28px 0 14px;padding-bottom:6px;display:inline-block}
+
+main p{margin-bottom:14px;color:#1f2937}
+
+.formula-box{background:#0f172a;color:#fff;padding:24px;border-radius:8px;margin:20px 0;font-family:Consolas,monospace;font-size:1.05rem;text-align:center;overflow-x:auto;letter-spacing:.5px}
+
+.vars-list{background:#f8fafc;border-left:3px solid #1e3a5f;padding:14px 20px;margin:16px 0;border-radius:4px}
+
+.vars-list ul{margin:8px 0 0 24px}
+
+.vars-list li{margin-bottom:5px;font-size:.92rem}
+
+.ejemplo-box{background:#fef9c3;border-left:4px solid #ca8a04;padding:16px 20px;margin:20px 0;border-radius:4px}
+
+.normas-list{background:#dbeafe;border-left:4px solid #2563eb;padding:16px 20px;margin:20px 0;border-radius:4px}
+
+.normas-list ul{margin:8px 0 0 22px}
+
+.normas-list li{margin-bottom:5px;font-size:.92rem;color:#1e3a8a}
+
+.consideraciones-box{background:#ecfdf5;border-left:4px solid #059669;padding:16px 20px;margin:20px 0;border-radius:4px}
+
+.limitaciones-box{background:#fee2e2;border-left:4px solid #b91c1c;padding:16px 20px;margin:20px 0;border-radius:4px}
+
+.limitaciones-box ul{margin:8px 0 0 22px}
+
+.limitaciones-box li{margin-bottom:5px;font-size:.92rem;color:#7f1d1d}
+
+.cta-calc{background:var(--primary);color:#fff;padding:32px;border-radius:12px;text-align:center;margin:32px 0}
+
+.cta-calc h3{color:#fff;margin-bottom:8px;font-family:var(--font-h);font-size:1.3rem}
+
+.cta-calc p{color:#e5e7eb}
+
+.cta-calc a{display:inline-block;background:#0d9488;color:#fff;padding:14px 32px;border-radius:6px;text-decoration:none;font-weight:700;margin-top:16px;font-size:1.02rem}
+
+footer{background:#0f172a;color:#cbd5e1;padding:28px 0;font-size:.88rem;margin-top:40px}
+
+footer a{color:#fff}
+
+.hero-calc{background:linear-gradient(135deg,#0f3460,#1e3a5f)}</style>
+
+
+
+
+
+
+
+
+
+
+
+<style id="hero-img-cap-v3">
+
+section.block{overflow:auto}
+
+section.block .hero-img-wrap{float:right!important;max-width:340px!important;width:340px!important;max-height:280px!important;margin:6px 0 16px 24px!important;overflow:hidden;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,.10);display:block!important}
+
+section.block .hero-img-wrap img{max-width:100%!important;max-height:280px!important;width:100%!important;height:280px!important;object-fit:cover!important;display:block!important;border-radius:10px}
+
+.inline-img{float:right!important;max-width:300px!important;width:300px!important;max-height:220px!important;margin:6px 0 18px 20px!important;overflow:hidden;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,.10)}
+
+.inline-img img{max-width:100%!important;max-height:220px!important;width:100%!important;height:220px!important;object-fit:cover!important;display:block!important;border-radius:10px}
+
+section.block h2{clear:both;margin-top:0}
+
+@media (max-width:768px){
+
+  section.block{overflow:visible}
+
+  section.block .hero-img-wrap{float:none!important;width:100%!important;max-width:100%!important;max-height:240px!important;margin:18px auto!important}
+
+  section.block .hero-img-wrap img{height:240px!important;max-height:240px!important}
+
+  .inline-img{float:none!important;width:100%!important;max-width:100%!important;max-height:220px!important;margin:18px auto!important}
+
+}
+
+main img:not([class]){max-width:100%;height:auto}
+
+</style>
+
+<meta name="layout" content="L6">
+
+
+
+<style id="calc-embed-label-fix">
+
+.calc-embed-wrap .calc-widget label{display:block!important;font-size:.85rem;color:#334155;font-weight:600;margin-bottom:14px}
+
+.calc-embed-wrap .calc-widget label > input,
+
+.calc-embed-wrap .calc-widget label > select,
+
+.calc-embed-wrap .calc-widget label > textarea{display:block;width:100%;margin-top:6px;padding:8px 10px;border:1px solid #cbd5e1;border-radius:6px;font-size:.95rem;font-weight:400;box-sizing:border-box}
+
+.calc-embed-wrap .calc-widget label > input:focus,
+
+.calc-embed-wrap .calc-widget label > select:focus{outline:2px solid var(--accent);outline-offset:1px;border-color:var(--accent)}
+
+.calc-embed-wrap .calc-widget label sub{vertical-align:sub;font-size:.72em;line-height:1}
+
+.calc-embed-wrap .calc-widget label .calc-unit{margin-left:4px;color:#64748b;font-weight:400;font-size:.85em}
+
+.calc-embed-wrap .calc-widget label .calc-hint{display:block;margin-top:4px;font-size:.72rem;color:#94a3b8;font-weight:400;font-style:italic}
+
+.calc-embed-wrap .calc-widget .calc-grid,
+
+.calc-embed-wrap .calc-widget .calc-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px 18px;margin-bottom:18px}
+
+.calc-embed-wrap .calc-widget h3{margin:1.5rem 0 .8rem;font-size:1.05rem;color:var(--primary,#0a2540)}
+
+@media (max-width:640px){
+
+  .calc-embed-wrap .calc-widget .calc-grid,
+
+  .calc-embed-wrap .calc-widget .calc-row{grid-template-columns:1fr}
+
+}
+
+</style>
+
+
+
+
+
+<style id="ftr-fix">footer .container>div{min-width:0}footer p,footer a{overflow-wrap:anywhere;word-break:break-word}</style><!--selfhost-fonts--><link rel="preload" href="fonts/inter-400-latin.woff2" as="font" type="font/woff2" crossorigin fetchpriority="high"><style></style><style id="selfhost-fonts">body{font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif}</style></head>
+
+<body data-layout-variant="1">
+
+<header>
+
+<div class="container">
+
+<a href="/" class="brand">Lab MS</a>
+
+<nav><a href="/">Inicio</a><span>Sismos</span><span>Geotecnia</span><a href="/calculadoras/">Calculadoras</a></nav>
+
+</div>
+
+</header>
+
+
+
+<section class="hero-calc">
+
+<div class="container">
+
+<div class="breadcrumb"><a href="/">Inicio</a> › <span>Blog</span> › <a href="/calculadoras/">Calculadoras</a> › Calculadora Presiómetro Ménard: PLim, EM y Capacidad Po</div>
+
+<h1>Calculadora Presiómetro Ménard: PLim, EM y Capacidad Portante para Suelos Chilenos</h1>
+
+<div class="meta">
+
+<span class="tipo-box">🧮 Calculadora · Ensayos</span>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<main>
+
+
+
+<div class="container">
+
+
+
+<p style="font-size:1.05rem;line-height:1.7">La calculadora Presiómetro Ménard automatiza la interpretación del ensayo presiométrico, determinando la presión límite (PLim), el módulo presiométrico (EM) y la capacidad portante del terreno. En Chile, donde la diversidad de suelos—desde gravas del norte hasta arcillas del sur—y la alta sismicidad exigen métodos robustos, esta herramienta permite dimensionar fundaciones con base en el método francés NF P94-261 y su adaptación local. Su uso reduce incertidumbres en proyectos de edificación, minería e infraestructura, optimizando diseños geotécnicos.</p>
+
+
+
+<h2>¿Cuándo se aplica?</h2>
+
+<p>Esta calculadora es aplicable en múltiples escenarios de la ingeniería chilena: edificación en altura (fundaciones profundas en Santiago), minería (diseño de rajos y botaderos en el norte), infraestructura vial (terraplenes y puentes en la Ruta 5), obras portuarias (muelles en Valparaíso) y túneles (metro de Santiago). También es útil en evaluaciones de estabilidad de taludes y cimentaciones sometidas a cargas sísmicas, donde el módulo presiométrico EM permite modelar la rigidez del suelo bajo condiciones dinámicas, complementando ensayos SPT y CPT.</p>
+
+
+
+<h2>Fórmula principal</h2>
+
+<div class="formula-box">q<sub>u</sub> = k · p<sub>l</sub>* · i<sub>δ</sub> · i<sub>β</sub> + γ · D<sub>f</sub><br>s = (q · B) / (2 · E<sub>M</sub>) · (1 - ν²) · I<sub>s</sub></div>
+
+
+
+<div class="vars-list">
+
+<strong>Variables:</strong>
+
+<ul><li>p<sub>l</sub>*: presión límite neta equivalente (kPa)</li><li>E<sub>M</sub>: módulo presiométrico Ménard (kPa)</li><li>k: factor de capacidad portante (adimensional)</li><li>i<sub>δ</sub>, i<sub>β</sub>: factores de inclinación de carga y base</li><li>s: asentamiento esperado (mm)</li><li>I<sub>s</sub>: factor de influencia (depende de geometría)</li></ul>
+
+</div>
+
+
+
+<h2>Ejemplo numérico</h2>
+
+<div class="ejemplo-box">Para una zapata de 2×2 m a 1.5 m de profundidad en un suelo con p<sub>l</sub>* = 1200 kPa, E<sub>M</sub> = 15 MPa, γ = 18 kN/m³ y k = 0.8, se obtiene q<sub>u</sub> = 0.8×1200 + 18×1.5 = 987 kPa. El asentamiento para una carga de trabajo de 300 kPa es s = (300×2)/(2×15000)×(1-0.3²)×0.82 ≈ 15 mm, verificando el criterio de servicio.</div>
+
+
+
+<h2>Normativa aplicable</h2>
+
+<div class="normas-list">
+
+<ul><li>NF P94-261: Justificación de obras geotécnicas – Ensayo presiométrico Ménard</li><li>NCh 1508.Of2014: Estudio de mecánica de suelos</li><li>NCh 433.Of2012: Diseño sísmico de edificios</li><li>DS 61 MINVU: Ordenanza General de Urbanismo y Construcciones</li></ul>
+
+</div>
+
+
+
+<h2>Consideraciones para proyectos en Chile</h2>
+
+<div class="consideraciones-box">En Chile, la alta actividad sísmica exige considerar efectos dinámicos en la capacidad portante y asentamientos. El módulo presiométrico EM se correlaciona con la velocidad de onda de corte (Vs) para evaluar licuación. Además, la presencia de suelos granulares en el norte y arcillas expansivas en el sur requiere ajustes en los factores de profundidad (i<sub>β</sub>) y en el módulo de reacción. La práctica local recomienda calibrar k con ensayos de plato de carga.</div>
+
+
+
+<h2>Limitaciones del método</h2>
+
+<div class="limitaciones-box">
+
+<ul><li>El método asume suelo homogéneo e isótropo, limitado en estratificaciones complejas.</li><li>No aplica directamente a suelos con alta fracción de gravas o rocas fracturadas.</li><li>Los factores de capacidad portante (k) son empíricos y requieren validación regional.</li></ul>
+
+</div>
+
+
+
+<!-- CALC_EMBED_v1 -->
+
+<div class="calc-embed-wrap">
+
+<div class="calc-embed-intro"><strong>🧮 Calculadora interactiva:</strong> usá los inputs para obtener resultados al instante. Gratis, sin registro.</div>
+
+<div class="calc-split-layout">
+
+<section class="calc-widget" aria-label="Calculadora interactiva Presiómetro Ménard">
+
+<h2>Calcular en línea</h2>
+
+<p class="calc-intro">Ingresa p0, pf, pL y EM; obtén P*Lim, P*f y qadm por método Ménard.</p>
+
+<form id="calc-form" novalidate>
+
+<div class="calc-row">
+
+<label>p0 presión inicial (kPa)<input type="number" id="p0" step="1" value="40" min="0" required></label>
+
+<label>pf fluencia (kPa)<input type="number" id="pf" step="1" value="1400" min="0" required></label>
+
+<label>pL límite (kPa)<input type="number" id="pl" step="1" value="2800" min="1" required></label>
+
+<label>EM (MPa)<input type="number" id="em" step="0.1" value="28" min="0.1" required></label>
+
+<label>Tipo de suelo<select id="tipo"><option value="arena">Arena / granular (kp≈0,8)</option><option value="arcilla">Arcilla (kp≈0,55)</option><option value="roca">Roca blanda (kp≈1,5)</option></select></label>
+
+</div>
+
+<button type="submit">Calcular qadm</button>
+
+</form>
+
+<div id="calc-resultado" role="status" aria-live="polite"></div>
+
+<p class="calc-note">qu = p0 + kp·P*Lim · qadm = qu/FS (FS=3). Relación EM/P*Lim indica estado del suelo (8-16 arenas densas típico).</p>
+
+</section>
+
+</div>
+
+</div>
+
+<style id="calc-embed-css-v1">.calc-embed-wrap{margin:32px 0;padding:0}.calc-embed-wrap .calc-split-layout{display:block}.calc-embed-wrap .calc-widget{margin:0}.calc-embed-wrap h2{margin-top:0;font-family:var(--font-h,inherit);color:var(--primary,#0A2540);font-size:1.35rem}.calc-embed-intro{background:#f0f9ff;border-left:4px solid #0d9488;padding:14px 20px;margin:0 0 16px;border-radius:4px;font-size:.95rem;color:#0c4a6e}.calc-embed-intro strong{color:#0d9488}</style>
+
+<style>
+
+.calc-widget{background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:1.25rem 1.5rem;margin:2rem 0;font-family:inherit}
+
+.calc-widget h2{margin:0 0 .5rem;font-size:1.15rem;color:#0f172a;border:0;padding:0}
+
+.calc-widget .calc-intro{margin:0 0 1rem;font-size:.88rem;color:#475569}
+
+.calc-widget .calc-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:.75rem;margin-bottom:1rem}
+
+.calc-widget label{display:flex;flex-direction:column;font-size:.82rem;color:#334155;font-weight:600}
+
+.calc-widget input,.calc-widget select{margin-top:.3rem;padding:.5rem .6rem;border:1px solid #cbd5e1;border-radius:6px;font-size:.92rem;font-family:inherit;background:#fff}
+
+.calc-widget input:focus,.calc-widget select:focus{outline:2px solid #0f766e;outline-offset:1px}
+
+.calc-widget button{background:#0f766e;color:#fff;border:0;padding:.6rem 1.4rem;border-radius:6px;font-weight:600;cursor:pointer;font-size:.92rem}
+
+.calc-widget button:hover{background:#115e59}
+
+.calc-widget #calc-resultado{margin-top:1rem;padding:.9rem 1rem;background:#fff;border-left:3px solid #0f766e;border-radius:4px;font-size:.92rem;min-height:1em}
+
+.calc-widget #calc-resultado:empty{display:none}
+
+.calc-widget #calc-resultado .ok{color:#166534;font-weight:700;font-size:1.02rem;display:block;margin-bottom:.3rem}
+
+.calc-widget #calc-resultado .err{color:#b91c1c;font-weight:600}
+
+.calc-widget .calc-note{margin:1rem 0 0;font-size:.78rem;color:#64748b;font-style:italic}
+
+</style>
+
+
+
+</div>
+
+</main>
+
+
+
+<footer>
+
+<div class="container">
+
+<p>&copy; 2026 Lab MS · <a href="/">Inicio</a> · <span>Blog sísmico</span> · <span>Blog geotécnico</span> · <a href="/calculadoras/">Calculadoras</a></p>
+
+<p style="font-size:.78rem;margin-top:8px;color:#94a3b8">Información con fines técnicos y educativos. Calculadora funcional alojada en Geotechnical Engineering AI.</p>
+
+</div>
+
+</footer>
+
+<script>
+
+(function(){
+
+var f=document.getElementById('calc-form');if(!f)return;
+
+var kps={arena:0.8,arcilla:0.55,roca:1.5};
+
+f.addEventListener('submit',function(e){
+
+e.preventDefault();
+
+var p0=parseFloat(document.getElementById('p0').value);
+
+var pf=parseFloat(document.getElementById('pf').value);
+
+var pl=parseFloat(document.getElementById('pl').value);
+
+var em=parseFloat(document.getElementById('em').value);
+
+var tipo=document.getElementById('tipo').value;
+
+var out=document.getElementById('calc-resultado');
+
+if(!isFinite(p0)||!isFinite(pf)||!isFinite(pl)||!isFinite(em)||pl<=p0||em<=0){out.innerHTML='<span class="err">Valores inválidos (pL &gt; p0 y EM &gt; 0).</span>';return;}
+
+var PlN=pl-p0;
+
+var PfN=pf-p0;
+
+var kp=kps[tipo];
+
+var FS=3;
+
+var qu=p0+kp*PlN;
+
+var qadm=qu/FS;
+
+var ratio=em*1000/PlN;
+
+var estado=ratio<6?'suelo remoldeado o arcilla blanda':(ratio<16?'estado normal (consistente)':'sobreconsolidado o roca blanda');
+
+out.innerHTML='<span class="ok">P*Lim = '+PlN.toFixed(0)+' kPa · P*f = '+PfN.toFixed(0)+' kPa · qadm ≈ '+qadm.toFixed(0)+' kPa · EM = '+em.toFixed(1)+' MPa</span>'+
+
+'qu = p0 + kp·P*Lim = '+p0.toFixed(0)+' + '+kp.toFixed(2)+'·'+PlN.toFixed(0)+' = '+qu.toFixed(0)+' kPa (FS = 3)<br>'+
+
+'<span style="color:#64748b;font-size:.85em">EM/P*Lim = '+ratio.toFixed(1)+' → '+estado+'</span>';
+
+});
+
+})();
+
+</script>
+
+</body>
+
+</html>
+

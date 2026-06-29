@@ -1,0 +1,575 @@
+<!doctype html>
+
+<html lang="es">
+
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head><meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Case Study: Control de Calidad Aeropuerto</title>
+
+<meta name="description" content="Estudio geotécnico para nueva pista en Aeropuerto Regional de La Araucanía. Ensayos SPT, CPTu y laboratorio NCh. Capacidad portante 250 kPa, Vs30 320 m/s.">
+
+<meta name="theme-color" content="#0c3e44">
+
+<link rel="canonical" href="https://laboratoriomecanicadesuelos.org/casos/control-calidad-aeropuerto/">
+
+<meta property="og:type" content="website">
+
+<meta property="og:title" content="Laboratorio Mecanica de Suelos · Laboratorio Geotécnico Acreditad">
+
+<meta property="og:description" content="Laboratorio de mecánica de suelos con acreditación NCh433.Of2012. Servicios de sondajes SPT, estabilidad de taludes y diseño de muros de contención en Chile.">
+
+<meta property="og:url" content="https://laboratoriomecanicadesuelos.org/">
+
+<meta property="og:site_name" content="Lab MS Chile">
+
+<meta property="og:image" content="https://laboratoriomecanicadesuelos.org/img/team_cl_geo_muro_contencion_terminado.png">
+
+<meta name="twitter:card" content="summary_large_image">
+
+<meta name="twitter:title" content="Laboratorio Mecanica de Suelos · Laboratorio Geotécnico Acreditad">
+
+<meta name="twitter:description" content="Laboratorio de mecánica de suelos con acreditación NCh433.Of2012. Servicios de sondajes SPT, estabilidad de taludes y diseño de muros de contención en Chile.">
+
+<meta name="twitter:image" content="https://laboratoriomecanicadesuelos.org/img/team_cl_geo_muro_contencion_terminado.png">
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%230A2540'/%3E%3Cpath d='M14 44 L24 30 L34 38 L44 22 L50 28' stroke='%23fff' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "ProfessionalService", "name": "Lab Mecanica Suelos Chile", "description": "Laboratorio de mecánica de suelos con acreditación NCh433.Of2012. Servicios de sondajes SPT, estabilidad de taludes y diseño de muros de contención en Chile.", "url": "https://laboratoriomecanicadesuelos.org/", "areaServed": {"@type": "City", "name": "Chile"}, "address": {"@type": "PostalAddress", "addressLocality": "Chile", "addressCountry": "Chile"}, "email": "info@laboratoriomecanicadesuelos.org", "priceRange": "$$"}</script>
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Laboratorio Mecanica de Suelos", "url": "https://laboratoriomecanicadesuelos.org/", "description": "Laboratorio de mecánica de suelos con acreditación NCh433.Of2012. Servicios de sondajes SPT, estabilidad de taludes y diseño de muros de contención en Chile.", "inLanguage": "es", "datePublished": "2026-05-27", "dateModified": "2026-05-27", "isPartOf": {"@type": "WebSite", "url": "https://laboratoriomecanicadesuelos.org/", "name": "Lab Mecanica Suelos"}}</script>
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "@id": "https://laboratoriomecanicadesuelos.org/#organization", "name": "Lab Mecanica Suelos", "url": "https://laboratoriomecanicadesuelos.org/", "logo": "https://laboratoriomecanicadesuelos.org/img/logo.png", "email": "info@laboratoriomecanicadesuelos.org", "address": {"@type": "PostalAddress", "addressCountry": "Chile"}, "aggregateRating": {"@type": "AggregateRating", "ratingValue": 4.9, "reviewCount": 56, "bestRating": 5, "worstRating": 1}}</script>
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "@id": "https://laboratoriomecanicadesuelos.org/#website", "name": "Lab Mecanica Suelos", "url": "https://laboratoriomecanicadesuelos.org/", "inLanguage": "es", "publisher": {"@id": "https://laboratoriomecanicadesuelos.org/#organization"}, "potentialAction": {"@type": "SearchAction", "target": {"@type": "EntryPoint", "urlTemplate": "https://laboratoriomecanicadesuelos.org/?s={search_term_string}"}, "query-input": "required name=search_term_string"}}</script>
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Cuál es la profundidad mínima recomendada para un sondaje SPT en Santiago?", "acceptedAnswer": {"@type": "Answer", "text": "La profundidad mínima recomendada es de 15 metros, o hasta alcanzar un estrato competente (N>50 golpes/pie). En proyectos con cargas elevadas, se sugiere extender hasta 30 metros."}}, {"@type": "Question", "name": "¿Qué normativa rige los ensayos de laboratorio de mecánica de suelos en Chile?", "acceptedAnswer": {"@type": "Answer", "text": "Los ensayos se rigen por la NCh3171.Of2010 para clasificación de suelos y la NCh1508.Of2014 para sondajes SPT. Además, se aplican estándares ASTM como referencia complementaria."}}, {"@type": "Question", "name": "¿Cómo afecta la zona sísmica al diseño de muros de contención?", "acceptedAnswer": {"@type": "Answer", "text": "La zona sísmica determina la aceleración máxima del terreno (Ao), que en Chile varía entre 0.10g y 0.40g. Esto influye en el empuje sísmico y requiere refuerzos adicionales en muros, según NCh433."}}]}</script>
+
+<meta name="layout" content="L3">
+
+<style>
+
+:root{
+
+  --primary:#0c3e44;
+
+  --accent:#0891b2;
+
+  --bg:#f7fafb;
+
+  --surface:#fff;
+
+  --text:#15252a;
+
+  --border:#e2eaec;
+
+  --muted:#64748b;
+
+  --font-body:'Inter',-apple-system,sans-serif;
+
+  --font-h:'Inter',-apple-system,sans-serif;
+
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+
+html{scroll-behavior:smooth}
+
+body{font-family:var(--font-body);line-height:1.65;color:var(--text);background:var(--bg)}
+
+a{color:var(--primary);text-decoration:none}
+
+a:hover{text-decoration:underline}
+
+/* Prose links — links dentro del contenido principal SIEMPRE visibles (underline + accent) */
+
+main section.block p a, main section.block li a, .cierre a {
+
+    color: var(--accent);
+
+    text-decoration: underline;
+
+    text-decoration-thickness: 1px;
+
+    text-underline-offset: 2px;
+
+    font-weight: 500;
+
+}
+
+main section.block p a:hover, main section.block li a:hover, .cierre a:hover {
+
+    text-decoration-thickness: 2px;
+
+    color: var(--primary);
+
+}
+
+.container{max-width:1400px;margin:0 auto;padding:0 24px}
+
+header{background:var(--primary);color:#fff;padding:18px 0;box-shadow:0 2px 8px rgba(0,0,0,.1)}
+
+header .container{display:flex;align-items:center;justify-content:space-between;gap:20px}
+
+header .brand-link{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff}
+
+header .brand-link:hover{text-decoration:none}
+
+header .logo{flex-shrink:0;filter:drop-shadow(0 1px 3px rgba(0,0,0,.3))}
+
+header .brand-line{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;line-height:1.1}
+
+header .brand-name{font-family:var(--font-h);font-size:1.18rem;font-weight:700;letter-spacing:.02em;color:#fff}
+
+header .brand-sep{color:#64748b;font-weight:300}
+
+header .brand-sub{font-size:.78rem;font-weight:400;color:#cbd5e1;letter-spacing:.02em}
+
+@media(max-width:560px){header .brand-sep,header .brand-sub{display:none}}
+
+header .navbar{display:flex;gap:4px;align-items:center;flex-wrap:wrap}
+
+header .nav-link{color:#e2e8f0;padding:8px 14px;border-radius:6px;font-size:.92rem;font-weight:500;transition:background .15s,color .15s;text-decoration:none;background:transparent;border:none;cursor:pointer;font-family:inherit;display:inline-flex;align-items:center;gap:4px}
+
+header .nav-link:hover,header .nav-link[aria-expanded="true"]{background:rgba(255,255,255,.1);color:#fff;text-decoration:none}
+
+header .nav-dd{position:relative}
+
+header .dd-arrow{font-size:.7rem;opacity:.8;transition:transform .15s}
+
+header .nav-link[aria-expanded="true"] .dd-arrow{transform:rotate(180deg)}
+
+header .dd-menu{position:absolute;top:calc(100% + 6px);left:0;background:#fff;min-width:240px;border-radius:8px;box-shadow:0 8px 28px rgba(0,0,0,.18);padding:6px 0;display:none;z-index:1000;border:1px solid rgba(0,0,0,.06)}
+
+header .nav-dd.open .dd-menu{display:block}
+
+header .dd-menu a{display:block;padding:10px 18px;color:#1f2937;font-size:.92rem;text-decoration:none;transition:background .12s}
+
+header .dd-menu a:hover{background:#f3f4f6;color:var(--primary);text-decoration:none}
+
+header .dd-menu a{display:flex!important;align-items:center;justify-content:space-between;gap:14px}
+
+header .hub-badge{display:inline-block;background:color-mix(in srgb, var(--accent) 18%, #fff 82%);color:var(--primary);font-size:.72rem;font-weight:600;padding:2px 8px;border-radius:11px;line-height:1.4}
+
+header .nav-burger{display:none;background:transparent;border:1px solid rgba(255,255,255,.2);color:#fff;padding:6px 12px;border-radius:6px;font-size:1.1rem;cursor:pointer}
+
+@media(max-width:780px){
+
+  header .container{flex-wrap:wrap}
+
+  header .nav-burger{display:inline-block}
+
+  header .navbar{display:none;width:100%;margin-top:14px;flex-direction:column;align-items:stretch;gap:2px;background:rgba(0,0,0,.15);padding:10px;border-radius:8px}
+
+  body.nav-open header .navbar{display:flex}
+
+  header .nav-dd{width:100%}
+
+  header .dd-menu{position:static;box-shadow:none;background:rgba(255,255,255,.04);border:none;padding:0;margin-top:4px}
+
+  header .dd-menu a{color:#e2e8f0;padding:8px 18px}
+
+  header .dd-menu a:hover{background:rgba(255,255,255,.08);color:#fff}
+
+}
+
+.hero{background:linear-gradient(180deg,var(--primary) 0%,color-mix(in srgb, var(--primary) 80%, var(--accent) 20%) 100%);color:#fff;padding:36px 0 50px}
+
+.hero h1{font-family:var(--font-h);font-size:2.1rem;line-height:1.25;font-weight:700;margin-bottom:12px;max-width:1280px}
+
+.hero p.subtitle{font-size:1.05rem;color:#cbd5e1;max-width:1100px;margin-bottom:18px}
+
+.breadcrumb{padding:0 0 14px;font-size:.85rem;color:#cbd5e1;background:transparent;border:none}
+
+.breadcrumb a{color:#93c5fd;text-decoration:none}
+
+.breadcrumb a:hover{color:#fff;text-decoration:underline}
+
+.breadcrumb span{color:#fff;font-weight:500}
+
+.block{background:var(--surface);border-radius:10px;padding:26px 30px;margin-bottom:20px;box-shadow:0 1px 4px rgba(0,0,0,.04);border:1px solid var(--border);overflow:hidden}
+
+.block::after{content:'';display:table;clear:both}
+
+h2{font-family:var(--font-h);font-size:1.45rem;color:var(--primary);margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid var(--border);font-weight:700}
+
+h3{font-family:var(--font-h);font-size:1.1rem;color:var(--primary);margin:14px 0 8px;font-weight:600}
+
+p{margin-bottom:12px;color:var(--text)}
+
+.hero-img-wrap{margin:18px 0;text-align:center}
+
+.hero-img-wrap img{max-width:100%;height:auto;border-radius:8px;box-shadow:0 4px 14px rgba(0,0,0,.08);display:inline-block}
+
+.inline-img{float:right;width:38%;max-width:320px;margin:6px 0 18px 22px}
+
+.inline-img img{display:block;width:100%!important;height:auto!important;max-width:100%;border-radius:8px;box-shadow:0 4px 14px rgba(0,0,0,.08)}
+
+@media(max-width:680px){.inline-img{float:none;width:100%;max-width:100%;margin:18px auto}}
+
+table{width:100%;border-collapse:collapse;margin:12px 0;font-size:.95rem;border-radius:6px;overflow:hidden}
+
+table th{background:var(--primary);color:#fff;padding:12px 14px;text-align:left;font-weight:600;font-size:.9rem;text-transform:uppercase;letter-spacing:.04em}
+
+table td{padding:10px 14px;border-bottom:1px solid var(--border)}
+
+table tr:nth-child(even) td{background:color-mix(in srgb, var(--bg) 50%, #f8fafc 50%)}
+
+.norm-list{list-style:none;display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+
+.norm-list li{background:color-mix(in srgb, var(--accent) 8%, #fff 92%);color:var(--primary);padding:8px 14px;border-radius:6px;border-left:3px solid var(--primary);font-family:ui-monospace,monospace;font-size:.92rem}
+
+.faq details{background:color-mix(in srgb, var(--bg) 60%, #f8fafc 40%);padding:14px 18px;margin-bottom:8px;border-radius:8px;border-left:3px solid var(--primary)}
+
+.faq summary{font-weight:600;cursor:pointer;color:var(--primary);font-size:1.02rem;list-style:none}
+
+.faq summary::-webkit-details-marker{display:none}
+
+.faq summary::after{content:'+';float:right;font-size:1.4rem;line-height:1;color:var(--muted)}
+
+.faq details[open] summary::after{content:'−'}
+
+.faq details[open] p{margin-top:12px;color:var(--text)}
+
+#mapa-ciudad{height:340px;border-radius:8px;border:1px solid var(--border);z-index:1}
+
+.sidebar h3{font-size:.85rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-bottom:12px;font-weight:600}
+
+.sidebar ul{list-style:none}
+
+.sidebar li{margin-bottom:6px}
+
+.sidebar a{color:var(--primary);font-size:.93rem;display:block;padding:8px 10px;border-radius:5px;transition:background .12s}
+
+.sidebar a:hover{background:color-mix(in srgb, var(--accent) 10%, #fff 90%);text-decoration:none}
+
+.cierre{background:color-mix(in srgb, var(--accent) 8%, #fff 92%);padding:20px 26px;border-radius:8px;border-left:4px solid var(--primary);margin-top:24px;color:var(--text);font-style:italic}
+
+.author-byline{background:var(--surface);border:1px solid var(--border);border-left:4px solid var(--primary);padding:14px 18px;border-radius:8px;display:flex;align-items:center;gap:14px;margin-bottom:20px;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+
+.author-byline img{width:48px;height:48px;border-radius:50%;object-fit:cover;flex-shrink:0;border:2px solid var(--border)}
+
+.author-byline .author-info{flex:1;min-width:0}
+
+.author-byline .author-label{font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+
+.author-byline .author-name{font-size:1rem;font-weight:700;color:var(--primary);display:block;text-decoration:none;line-height:1.3}
+
+.author-byline .author-title{font-size:.82rem;color:var(--muted);margin-top:2px}
+
+.author-byline .author-date{font-size:.72rem;color:var(--muted);text-align:right;line-height:1.5;flex-shrink:0}
+
+@media(max-width:560px){.author-byline{flex-wrap:wrap}.author-byline .author-date{text-align:left;width:100%;margin-top:8px;border-top:1px solid var(--border);padding-top:8px}}
+
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:14px}
+
+.service-card{display:flex;justify-content:space-between;align-items:center;padding:18px 22px;background:var(--bg);border-radius:8px;border:1px solid var(--border);text-decoration:none;color:var(--primary);transition:transform .15s,box-shadow .15s,border-color .15s}
+
+.service-card:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,0,0,.08);border-color:var(--accent);text-decoration:none}
+
+.service-card .card-title{font-weight:600;font-size:1.02rem}
+
+.service-card .card-arrow{font-size:1.3rem;color:var(--accent)}
+
+.sat-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+
+.sat-chip{display:inline-flex;align-items:center;padding:7px 14px;background:color-mix(in srgb, var(--accent) 7%, #fff 93%);border:1px solid var(--border);border-radius:18px;color:var(--primary);font-size:.9rem;text-decoration:none;transition:background .12s,border-color .12s,transform .12s}
+
+.sat-chip:hover{background:color-mix(in srgb, var(--accent) 14%, #fff 86%);border-color:var(--accent);text-decoration:none;transform:translateY(-1px)}
+
+.sat-to-hub{display:flex;align-items:center;justify-content:space-between;gap:14px;background:color-mix(in srgb, var(--primary) 6%, #fff 94%);border-left:4px solid var(--primary);padding:14px 22px;border-radius:6px;margin:0 0 22px;font-size:.95rem;flex-wrap:wrap}
+
+.sat-to-hub-label{color:var(--text)}
+
+.sat-to-hub-link{color:var(--primary);font-weight:600;text-decoration:none;white-space:nowrap}
+
+.sat-to-hub-link:hover{text-decoration:underline}
+
+.cta-block,section.block.cta-block{background:linear-gradient(135deg, var(--primary) 0%, color-mix(in srgb, var(--primary) 70%, var(--accent) 30%) 100%)!important;color:#fff!important;border:none!important;padding:36px 40px!important;text-align:center!important;border-radius:12px!important;box-shadow:0 4px 18px rgba(0,0,0,.12)!important;margin:24px 0!important;border-top:none!important}
+
+.cta-block h2,section.block.cta-block h2{color:#fff!important;border-bottom:none!important;padding-bottom:0!important;font-size:1.55rem!important;margin-bottom:10px!important;text-shadow:0 1px 2px rgba(0,0,0,.15)!important}
+
+.cta-block h2::after,section.block.cta-block h2::after{display:none!important;content:none!important}
+
+.cta-block p,section.block.cta-block p{color:#e2e8f0!important;margin-bottom:18px!important;font-size:1rem!important;max-width:none!important}
+
+.cta-buttons{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:14px}
+
+.cta-wa,.cta-email{display:inline-block;padding:12px 24px;border-radius:8px;font-weight:600;text-decoration:none;font-size:.95rem;transition:transform .12s,box-shadow .12s}
+
+.cta-wa{background:#25d366;color:#fff}
+
+.cta-wa:hover{transform:translateY(-1px);box-shadow:0 4px 12px rgba(37,211,102,.4);text-decoration:none}
+
+.cta-email{background:#fff;color:var(--primary)}
+
+.cta-email:hover{transform:translateY(-1px);box-shadow:0 4px 12px rgba(255,255,255,.2);text-decoration:none}
+
+.cta-email-note{font-size:.85rem;color:#cbd5e1;margin-top:8px;margin-bottom:0}
+
+.cta-email-note a{color:#93c5fd}
+
+.cta-email-note a:hover{color:#fff}
+
+/* Cities chips (S4) — internal linking bottom-of-page */
+
+.city-chips-section{margin:30px auto 24px;max-width:1200px}
+
+.city-chips-section > h2{font-family:var(--font-h);font-size:1.35rem;color:var(--primary);margin-bottom:18px;padding-bottom:8px;border-bottom:2px solid var(--border);font-weight:700}
+
+.city-chips-zone{margin-bottom:18px}
+
+.city-chips-zone:last-child{margin-bottom:0}
+
+.city-chips-zone-title{font-family:var(--font-h);font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:10px;font-weight:700;border:none;padding:0}
+
+.city-chips-row{display:flex;flex-wrap:wrap;gap:8px}
+
+.city-chip{display:inline-flex;align-items:center;padding:7px 14px;background:color-mix(in srgb, var(--accent) 6%, #fff 94%);border:1px solid var(--border);border-radius:18px;color:var(--primary);font-size:.9rem;text-decoration:none;transition:background .12s,border-color .12s,transform .12s,box-shadow .12s;font-weight:500;line-height:1.2;white-space:nowrap}
+
+.city-chip:hover{background:color-mix(in srgb, var(--accent) 14%, #fff 86%);border-color:var(--accent);color:var(--primary);text-decoration:none;transform:translateY(-1px);box-shadow:0 2px 6px rgba(0,0,0,.06)}
+
+@media(max-width:560px){.city-chip{font-size:.85rem;padding:6px 12px}}
+
+footer{background:var(--primary);color:#cbd5e1;padding:36px 0;margin-top:50px}
+
+footer .container{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:30px;align-items:start}
+
+footer h4{color:#fff;font-size:.85rem;text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px}
+
+footer p,footer a{color:#cbd5e1;font-size:.88rem;line-height:1.7}
+
+footer a:hover{color:#fff}
+
+footer .copyr{grid-column:1/-1;border-top:1px solid color-mix(in srgb, var(--primary) 60%, #fff 40%);padding-top:18px;text-align:center;color:#94a3b8;font-size:.82rem}
+
+footer .footer-designer-credit{color:#94a3b8;font-size:.78rem;margin-top:8px;font-style:italic}
+
+.mag-layout{padding:42px 24px;max-width:1320px;margin:0 auto}
+
+.mag-layout main{min-width:0}
+
+.mag-layout h1{font-size:2.8rem!important;line-height:1.15;letter-spacing:-.02em;font-weight:800}
+
+.mag-layout .block{padding:30px 40px;background:transparent;border:none;border-top:1px solid var(--border);border-radius:0;box-shadow:none;margin-bottom:0}
+
+.mag-layout .block:first-child{border-top:none}
+
+.mag-layout h2{font-size:1.6rem;border-bottom:none;padding-bottom:0}
+
+.mag-layout p:first-of-type{font-size:1.08rem;line-height:1.7;color:var(--text)}
+
+/* drop-cap REMOVIDO 2026-05-27 (user feedback) — afectaba a todos los párrafos de cards/bloques */
+
+</style>
+
+<style id="hero-img-cap-v3">
+
+section.block{overflow:auto}
+
+section.block .hero-img-wrap{float:right!important;max-width:340px!important;width:340px!important;max-height:280px!important;margin:6px 0 16px 24px!important;overflow:hidden;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,.10);display:block!important}
+
+section.block .hero-img-wrap img{max-width:100%!important;max-height:280px!important;width:100%!important;height:280px!important;object-fit:cover!important;display:block!important;border-radius:10px}
+
+.inline-img{float:right!important;max-width:300px!important;width:300px!important;max-height:220px!important;margin:6px 0 18px 20px!important;overflow:hidden;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,.10)}
+
+.inline-img img{max-width:100%!important;max-height:220px!important;width:100%!important;height:220px!important;object-fit:cover!important;display:block!important;border-radius:10px}
+
+section.block h2{clear:both;margin-top:0}
+
+@media (max-width:768px){
+
+  section.block{overflow:visible}
+
+  section.block .hero-img-wrap{float:none!important;width:100%!important;max-width:100%!important;max-height:240px!important;margin:18px auto!important}
+
+  section.block .hero-img-wrap img{height:240px!important;max-height:240px!important}
+
+  .inline-img{float:none!important;width:100%!important;max-width:100%!important;max-height:220px!important;margin:18px auto!important}
+
+}
+
+main img:not([class]){max-width:100%;height:auto}
+
+</style>
+
+<!-- logo-unique-v1 -->
+
+</script>
+
+<style id="cta-center-fix">
+
+.cta-block,section.block.cta-block{margin:32px auto!important;max-width:760px!important;text-align:center!important}
+
+.cta-block .cta-inner{margin:0 auto;max-width:600px;text-align:center}
+
+.cta-block h2{text-align:center!important}
+
+.cta-block p{text-align:center!important}
+
+.cta-buttons{display:flex!important;justify-content:center!important;align-items:center!important;flex-wrap:wrap!important}
+
+.cta-block .cta-email{display:inline-block;padding:14px 28px;background:#fff;color:var(--primary)!important;border-radius:9999px;font-weight:700;text-decoration:none;font-size:1.05rem}
+
+.cta-block .cta-email:hover{background:var(--accent);color:#fff!important;transform:translateY(-1px)}
+
+@media(max-width:900px){.cta-block,section.block.cta-block{max-width:100%!important}}
+
+</style>
+
+<style id="ftr-fix">footer .container>div{min-width:0}footer p,footer a{overflow-wrap:anywhere;word-break:break-word}</style><!--selfhost-fonts--><link rel="preload" href="fonts/inter-400-latin.woff2" as="font" type="font/woff2" crossorigin fetchpriority="high"><style></style><style id="selfhost-fonts">body{font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif}</style></head>
+
+<body>
+
+<header>
+
+<div class="container">
+
+<a class="brand-link" href="/">
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="40" height="40"><rect width="64" height="64" rx="10" fill="#581c87"/><circle cx="32" cy="30" r="20" stroke="#c4b5fd" stroke-width="2.5" fill="none"/><path d="M12 30 L52 30 M20 16 L44 44 M44 16 L20 44 M12 22 L52 38 M12 38 L52 22" stroke="#c4b5fd" stroke-width="1" opacity="0.6"/><circle cx="32" cy="30" r="20" fill="#c4b5fd" opacity="0.08"/><circle cx="20" cy="52" r="2" fill="#c4b5fd"/><circle cx="28" cy="56" r="1.5" fill="#c4b5fd"/><circle cx="36" cy="54" r="2" fill="#c4b5fd"/><circle cx="44" cy="56" r="1.5" fill="#c4b5fd"/></svg>
+
+<div class="brand-line">
+
+  <span class="brand-name">Lab MS</span>
+
+  <span class="brand-sep">·</span>
+
+  <span class="brand-sub">Ingeniería Geotécnica</span>
+
+</div>
+
+</a>
+
+<nav class="navbar" aria-label="principal">
+
+<a href="/" class="nav-link">Inicio</a>
+
+<div class="nav-dd"><button class="nav-link nav-toggle" aria-haspopup="true" aria-expanded="false">Servicios<span class="dd-arrow">▾</span></button><div class="dd-menu" role="menu"><a href="/sondajes-spt/" role="menuitem">Sondajes SPT</a></div></div>
+
+<div class="nav-dd"><button class="nav-link nav-toggle" aria-haspopup="true" aria-expanded="false">Cobertura<span class="dd-arrow">▾</span></button><div class="dd-menu" role="menu"><a href="/laboratorio-ms-en-santiago/" role="menuitem" class="hub-main"><strong>Santiago</strong></a><a href="/laboratorio-ms-en-antofagasta/" role="menuitem" class="hub-main"><strong>Antofagasta</strong></a><a href="/laboratorio-ms-en-concepcion/" role="menuitem" class="hub-main"><strong>Concepción</strong></a><a href="/laboratorio-ms-en-valparaiso/" role="menuitem" class="hub-main"><strong>Valparaíso</strong></a><a href="/laboratorio-ms-en-iquique/" role="menuitem" class="hub-main"><strong>Iquique</strong></a></div></div>
+
+<a href="/calculadoras/" class="nav-link">Calculadoras</a>
+
+
+
+
+
+<a href="/equipo/diego-hidalgo-manriquez/" class="nav-link">Equipo</a>
+
+</nav>
+
+<button class="nav-burger" aria-label="menú" onclick="document.body.classList.toggle('nav-open')">☰</button>
+
+</div>
+
+</header>
+
+
+
+<section class="hero">
+
+<div class="container">
+
+<nav class="breadcrumb"><a href="/">Inicio</a> › Casos › Case Study: Control de Calidad Aeropuerto</nav>
+
+<h1>Case Study: Control de Calidad Aeropuerto</h1>
+
+<p class="subtitle">Desafío: suelos volcánicos con alta compressibilidad y nivel freático somero en plataforma aeroportuaria.</p>
+
+</div>
+
+</section>
+
+<div class="container">
+
+<main>
+
+<section class="block">
+
+<p><strong>Cliente:</strong> Constructora del Sur SpA · <strong>Ubicación:</strong> Temuco, comuna de Freire · <strong>Fecha:</strong> 2024-06 · <strong>Duración:</strong> 4 meses</p>
+
+</section>
+
+<section class="block"><h2>Desafío</h2><p>El proyecto de ampliación de la pista del Aeropuerto Regional de La Araucanía requería un control de calidad geotécnico riguroso debido a la presencia de suelos volcánicos (trumaos) con alta compressibilidad y baja densidad natural. La zona presentaba un nivel freático somero (1.5-2.5 m de profundidad), lo que generaba riesgos de licuefacción y asentamientos diferenciales bajo cargas dinámicas de aeronaves. Además, la normativa aeroportuaria exigía una capacidad portante mínima de 200 kPa en subrasante y un módulo de reacción (k) superior a 50 MN/m³. El cliente necesitaba validar el diseño de mejoramiento de suelo (reemplazo con lastre) propuesto por la ingeniería, optimizando espesores para cumplir plazos de obra. El principal desafío técnico fue caracterizar la variabilidad lateral del depósito volcánico, con lentes de ceniza y pumicita intercalados, y definir parámetros de resistencia al corte no drenada (Su) y permeabilidad para modelar consolidación.</p></section>
+
+<section class="block"><h2>Enfoque y Metodología</h2><p>Se ejecutó una campaña de exploración geotécnica con 12 sondajes a percusión con SPT (NCh1508) hasta 15 m de profundidad, complementados con 6 ensayos de penetración cónica (CPTu) para perfil continuo de resistencia y poro-presión. Se recuperaron muestras inalteradas con tubo Shelby para ensayos de laboratorio: clasificación unificada (SUCS), humedad natural, densidad, corte directo (NCh1509), compresión no confinada (NCh1510), consolidación unidimensional (NCh1511) y permeabilidad de carga variable. Se instalaron 4 piezómetros de cuerda vibrante para monitoreo semanal del nivel freático durante 2 meses. Los ensayos de laboratorio se realizaron en las instalaciones del Laboratorio Mecánica de Suelos, siguiendo protocolos NCh3171 para diseño geotécnico. Se realizaron 10 ensayos de placa de carga (φ=0.30 m) en subrasante natural y mejorada para medir módulo de reacción (k). La frecuencia de muestreo fue cada 1.5 m en sondajes, con ensayos SPT cada 1.0 m. Se determinó la velocidad de ondas de corte (Vs) mediante MASW en 3 líneas de 47 m para evaluar efecto sísmico según NCh433.Of2012.</p></section>
+
+<section class="block"><h2>Resultados</h2><p>Se determinó que la subrasante natural presentaba una capacidad portante admisible (qadm) de 120-150 kPa, insuficiente para el diseño. Tras el reemplazo con lastre (espesor 0.8 m), la qadm aumentó a 250-300 kPa, cumpliendo el requisito. El módulo de reacción k alcanzó 65 MN/m³ en zonas mejoradas. Los ensayos de consolidación mostraron que el asentamiento primario sería de 2.5 cm en 10 años, dentro del límite admisible de 5 cm. La velocidad promedio Vs30 fue de 320 m/s, clasificando el sitio como tipo C (suelo denso) según NCh433, lo que permitió usar un espectro de diseño menos exigente. Se identificaron 3 lentes de pumicita a 6-8 m de profundidad, que fueron excluidos del diseño de cimentaciones. El cliente ahorró un 15% en espesor de mejoramiento respecto al diseño inicial, equivalente a 1200 m³ de material. Los parámetros geotécnicos finales se entregaron en un informe con certificación NCh3171.</p>
+
+<table><thead><tr><th>Parámetro</th><th>Valor</th></tr></thead><tbody><tr><td>Profundidad sondajes (m)</td><td>12-15</td></tr>
+
+<tr><td>N° puntos SPT</td><td>72</td></tr>
+
+<tr><td>qadm obtenida (kPa)</td><td>250-300</td></tr>
+
+<tr><td>Vs30 promedio (m/s)</td><td>320</td></tr></tbody></table>
+
+</section>
+
+<section class="block"><h2>Lecciones aprendidas</h2><ul><li>La combinación de SPT y CPTu permitió detectar lentes blandos de pumicita no identificables solo con SPT.</li>
+
+<li>El monitoreo de nivel freático con piezómetros de cuerda vibrante fue clave para ajustar el modelo de consolidación.</li>
+
+<li>Los ensayos de placa de carga in situ son indispensables para validar módulos de reacción en suelos volcánicos.</li></ul></section>
+
+<blockquote style="border-left:4px solid var(--accent);padding:1rem 1.5rem;background:#f8fafc;margin:1.5rem 0;border-radius:8px"><p>"El estudio geotécnico del Laboratorio Mecánica de Suelos nos entregó la certeza técnica para optimizar el mejoramiento del suelo, cumpliendo los exigentes plazos del aeropuerto. La rigurosidad en los ensayos y la interpretación de resultados fue fundamental."</p><footer>— Carlos Muñoz Riquelme, Jefe de Proyecto, Constructora del Sur SpA</footer></blockquote>
+
+</main>
+
+</div>
+
+
+
+<footer>
+
+<div class="container">
+
+<div>
+
+<h4>Lab Mecanica Suelos</h4>
+
+<p>Servicios geotécnicos profesionales (Chile).</p>
+
+<p class="footer-designer-credit">Sitio diseñado por equipo geotécnico</p>
+
+</div>
+
+<div>
+
+<h4>Contacto</h4>
+
+<p>Email: <a href="/cdn-cgi/l/email-protection#1f767179705f737e7d706d7e6b706d7670727a7c7e71767c7e7b7a6c6a7a73706c31706d78"><span class="__cf_email__" data-cfemail="c7aea9a1a887aba6a5a8b5a6b3a8b5aea8aaa2a4a6a9aea4a6a3a2b4b2a2aba8b4e9a8b5a0">[email&#160;protected]</span></a></p>
+
+</div>
+
+<div>
+
+<h4>Servicios</h4>
+
+<p><a href="/">Laboratorio de Mecanica de Suelos</a><br><a href="/sondajes-spt/">Sondajes SPT</a></p>
+
+</div>
+
+<div>
+
+<h4>Legal</h4>
+
+<p><a href="/sitemap.xml">Mapa del sitio</a></p>
+
+</div>
+
+<div class="copyr">&copy; 2026 Lab MS Acreditado Ltda. · Fundada 2011 · Concepción, Chile</div>
+
+</div>
+
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+<script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="">
+</body></html>

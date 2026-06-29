@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Calculadora Pavimento Flexible AASHTO 93: SN y Espesores para</title>
+
+<meta name="description" content="Diseña pavimentos flexibles con AASHTO 93: calcula número estructural SN y espesores. Adaptado a normativa chilena NCh.">
+
+<meta name="theme-color" content="#0c3e44">
+
+<link rel="canonical" href="https://laboratoriomecanicadesuelos.org/calculadoras/pavimento-flexible-aashto/">
+
+<meta property="og:type" content="article">
+
+<meta property="og:title" content="Calculadora Pavimento Flexible AASHTO 93: SN y Espesores para">
+
+<meta property="og:description" content="Diseña pavimentos flexibles con AASHTO 93: calcula número estructural SN y espesores. Adaptado a normativa chilena NCh.">
+
+<meta property="og:url" content="https://laboratoriomecanicadesuelos.org/blog/calculadoras/pavimento-flexible-aashto/">
+
+
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%230A2540'/%3E%3Cpath d='M14 44 L24 30 L34 38 L44 22 L50 28' stroke='%23fff' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+
+
+
+
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "@id": "https://laboratoriomecanicadesuelos.org/blog/calculadoras/pavimento-flexible-aashto/#article", "headline": "Calculadora Pavimento Flexible AASHTO 93: SN y Espesores para Geotecnia Chilena", "description": "Diseña pavimentos flexibles con AASHTO 93: calcula número estructural SN y espesores. Adaptado a normativa chilena NCh.", "datePublished": "2026-05-26", "dateModified": "2026-05-26", "url": "https://laboratoriomecanicadesuelos.org/blog/calculadoras/pavimento-flexible-aashto/", "inLanguage": "es", "author": {"@type": "Organization", "name": "Lab MS"}, "publisher": {"@type": "Organization", "name": "Lab MS", "url": "https://laboratoriomecanicadesuelos.org/"}, "about": {"@type": "Thing", "name": "Pavimento Flexible AASHTO 93: SN y Espesores · Mecánica de Suelos"}, "keywords": ["calculadora geotécnica", "pavimentos", "pavimento flexible aashto", "Chile", "NCh 1508"]}</script>
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://laboratoriomecanicadesuelos.org/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://laboratoriomecanicadesuelos.org/blog/"}, {"@type": "ListItem", "position": 3, "name": "Calculadoras", "item": "https://laboratoriomecanicadesuelos.org/blog/calculadoras/"}, {"@type": "ListItem", "position": 4, "name": "Calculadora Pavimento Flexible AASHTO 93: SN y Espesores par", "item": "https://laboratoriomecanicadesuelos.org/blog/calculadoras/pavimento-flexible-aashto/"}]}</script>
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "@id": "https://laboratoriomecanicadesuelos.org/blog/calculadoras/pavimento-flexible-aashto/#webapp", "name": "Calculadora Pavimento Flexible AASHTO 93", "description": "Diseña pavimentos flexibles con AASHTO 93: calcula número estructural SN y espesores. Adaptado a normativa chilena NCh.", "applicationCategory": "EngineeringApplication", "applicationSubCategory": "Geotechnical Engineering Calculator", "operatingSystem": "Web", "url": "https://laboratoriomecanicadesuelos.org/blog/calculadoras/pavimento-flexible-aashto/", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "inLanguage": "es"}</script>
+
+<style>
+
+:root{--primary:#0c3e44;--accent:#0891b2;--bg:#f7fafb;--surface:#fff;--text:#15252a;--border:#e2eaec;--muted:#64748b;--font-body:'Source Sans 3',-apple-system,sans-serif;--font-h:'Source Serif 4',Georgia,serif}
+
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{font-family:var(--font-body);line-height:1.65;color:#1f2937;background:var(--bg)}
+
+a{color:var(--accent);text-decoration:underline}
+
+.container{max-width:880px;margin:0 auto;padding:0 24px}
+
+header{background:var(--primary);color:#fff;padding:18px 0}
+
+header .container{display:flex;align-items:center;justify-content:space-between}
+
+header a{color:#fff;text-decoration:none}
+
+header .brand{font-family:var(--font-h);font-size:1.2rem;font-weight:700}
+
+header nav{display:flex;gap:16px;font-size:.92rem}
+
+.hero-calc{color:#fff;padding:60px 0 40px}
+
+.hero-calc h1{font-family:var(--font-h);font-size:2.0rem;margin-bottom:12px;line-height:1.2}
+
+.hero-calc .breadcrumb{font-size:.85rem;color:#cbd5e1;margin-bottom:16px}
+
+.hero-calc .breadcrumb a{color:#fff;text-decoration:underline}
+
+.hero-calc .meta{display:flex;gap:24px;color:#cbd5e1;font-size:.9rem;flex-wrap:wrap;margin-top:12px}
+
+.hero-calc .tipo-box{display:inline-block;background:rgba(255,255,255,.18);color:#fff;padding:6px 14px;border-radius:6px;font-weight:600;font-size:.95rem;margin-right:12px}
+
+main{padding:40px 0 60px}
+
+main h2{font-family:var(--font-h);font-size:1.5rem;color:var(--primary);margin:28px 0 14px;padding-bottom:6px;display:inline-block}
+
+main p{margin-bottom:14px;color:#1f2937}
+
+.formula-box{background:#0f172a;color:#fff;padding:24px;border-radius:8px;margin:20px 0;font-family:Consolas,monospace;font-size:1.05rem;text-align:center;overflow-x:auto;letter-spacing:.5px}
+
+.vars-list{background:#f8fafc;border-left:3px solid #1e3a5f;padding:14px 20px;margin:16px 0;border-radius:4px}
+
+.vars-list ul{margin:8px 0 0 24px}
+
+.vars-list li{margin-bottom:5px;font-size:.92rem}
+
+.ejemplo-box{background:#fef9c3;border-left:4px solid #ca8a04;padding:16px 20px;margin:20px 0;border-radius:4px}
+
+.normas-list{background:#dbeafe;border-left:4px solid #2563eb;padding:16px 20px;margin:20px 0;border-radius:4px}
+
+.normas-list ul{margin:8px 0 0 22px}
+
+.normas-list li{margin-bottom:5px;font-size:.92rem;color:#1e3a8a}
+
+.consideraciones-box{background:#ecfdf5;border-left:4px solid #059669;padding:16px 20px;margin:20px 0;border-radius:4px}
+
+.limitaciones-box{background:#fee2e2;border-left:4px solid #b91c1c;padding:16px 20px;margin:20px 0;border-radius:4px}
+
+.limitaciones-box ul{margin:8px 0 0 22px}
+
+.limitaciones-box li{margin-bottom:5px;font-size:.92rem;color:#7f1d1d}
+
+.cta-calc{background:var(--primary);color:#fff;padding:32px;border-radius:12px;text-align:center;margin:32px 0}
+
+.cta-calc h3{color:#fff;margin-bottom:8px;font-family:var(--font-h);font-size:1.3rem}
+
+.cta-calc p{color:#e5e7eb}
+
+.cta-calc a{display:inline-block;background:#0d9488;color:#fff;padding:14px 32px;border-radius:6px;text-decoration:none;font-weight:700;margin-top:16px;font-size:1.02rem}
+
+footer{background:#0f172a;color:#cbd5e1;padding:28px 0;font-size:.88rem;margin-top:40px}
+
+footer a{color:#fff}
+
+.hero-calc{background:linear-gradient(135deg,#1f2937,#374151)}</style>
+
+
+
+
+
+
+
+
+
+
+
+<style id="hero-img-cap-v3">
+
+section.block{overflow:auto}
+
+section.block .hero-img-wrap{float:right!important;max-width:340px!important;width:340px!important;max-height:280px!important;margin:6px 0 16px 24px!important;overflow:hidden;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,.10);display:block!important}
+
+section.block .hero-img-wrap img{max-width:100%!important;max-height:280px!important;width:100%!important;height:280px!important;object-fit:cover!important;display:block!important;border-radius:10px}
+
+.inline-img{float:right!important;max-width:300px!important;width:300px!important;max-height:220px!important;margin:6px 0 18px 20px!important;overflow:hidden;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,.10)}
+
+.inline-img img{max-width:100%!important;max-height:220px!important;width:100%!important;height:220px!important;object-fit:cover!important;display:block!important;border-radius:10px}
+
+section.block h2{clear:both;margin-top:0}
+
+@media (max-width:768px){
+
+  section.block{overflow:visible}
+
+  section.block .hero-img-wrap{float:none!important;width:100%!important;max-width:100%!important;max-height:240px!important;margin:18px auto!important}
+
+  section.block .hero-img-wrap img{height:240px!important;max-height:240px!important}
+
+  .inline-img{float:none!important;width:100%!important;max-width:100%!important;max-height:220px!important;margin:18px auto!important}
+
+}
+
+main img:not([class]){max-width:100%;height:auto}
+
+</style>
+
+<meta name="layout" content="L5">
+
+
+
+<style id="calc-embed-label-fix">
+
+.calc-embed-wrap .calc-widget label{display:block!important;font-size:.85rem;color:#334155;font-weight:600;margin-bottom:14px}
+
+.calc-embed-wrap .calc-widget label > input,
+
+.calc-embed-wrap .calc-widget label > select,
+
+.calc-embed-wrap .calc-widget label > textarea{display:block;width:100%;margin-top:6px;padding:8px 10px;border:1px solid #cbd5e1;border-radius:6px;font-size:.95rem;font-weight:400;box-sizing:border-box}
+
+.calc-embed-wrap .calc-widget label > input:focus,
+
+.calc-embed-wrap .calc-widget label > select:focus{outline:2px solid var(--accent);outline-offset:1px;border-color:var(--accent)}
+
+.calc-embed-wrap .calc-widget label sub{vertical-align:sub;font-size:.72em;line-height:1}
+
+.calc-embed-wrap .calc-widget label .calc-unit{margin-left:4px;color:#64748b;font-weight:400;font-size:.85em}
+
+.calc-embed-wrap .calc-widget label .calc-hint{display:block;margin-top:4px;font-size:.72rem;color:#94a3b8;font-weight:400;font-style:italic}
+
+.calc-embed-wrap .calc-widget .calc-grid,
+
+.calc-embed-wrap .calc-widget .calc-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px 18px;margin-bottom:18px}
+
+.calc-embed-wrap .calc-widget h3{margin:1.5rem 0 .8rem;font-size:1.05rem;color:var(--primary,#0a2540)}
+
+@media (max-width:640px){
+
+  .calc-embed-wrap .calc-widget .calc-grid,
+
+  .calc-embed-wrap .calc-widget .calc-row{grid-template-columns:1fr}
+
+}
+
+</style>
+
+
+
+
+
+<style id="ftr-fix">footer .container>div{min-width:0}footer p,footer a{overflow-wrap:anywhere;word-break:break-word}</style><!--selfhost-fonts--><link rel="preload" href="fonts/inter-400-latin.woff2" as="font" type="font/woff2" crossorigin fetchpriority="high"><style></style><style id="selfhost-fonts">body{font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif}</style></head>
+
+<body data-layout-variant="0">
+
+<header>
+
+<div class="container">
+
+<a href="/" class="brand">Lab MS</a>
+
+<nav><a href="/">Inicio</a><span>Sismos</span><span>Geotecnia</span><a href="/calculadoras/">Calculadoras</a></nav>
+
+</div>
+
+</header>
+
+
+
+<section class="hero-calc">
+
+<div class="container">
+
+<div class="breadcrumb"><a href="/">Inicio</a> › <span>Blog</span> › <a href="/calculadoras/">Calculadoras</a> › Calculadora Pavimento Flexible AASHTO 93: SN y Espesore</div>
+
+<h1>Calculadora Pavimento Flexible AASHTO 93: SN y Espesores para Geotecnia Chilena</h1>
+
+<div class="meta">
+
+<span class="tipo-box">🧮 Calculadora · Pavimentos</span>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<main>
+
+
+
+<div class="container">
+
+
+
+<p style="font-size:1.05rem;line-height:1.7">La calculadora de pavimento flexible AASHTO 93 permite obtener el número estructural (SN) y los espesores de carpeta, base y subbase a partir de parámetros como el tránsito equivalente W18, el módulo resiliente MR, la confiabilidad R y la pérdida de serviciabilidad ΔPSI. En Chile, su uso es clave para proyectos viales, mineros y urbanos, ya que se alinea con las exigencias de la NCh 1508 y el DS61 MINVU, garantizando diseños que resistan las condiciones sísmicas y climáticas del país.</p>
+
+
+
+<h2>¿Cuándo se aplica?</h2>
+
+<p>Esta calculadora se emplea en el diseño de pavimentos flexibles para carreteras interurbanas, accesos mineros, calles urbanas y áreas portuarias en Chile. Es útil en etapas de prefactibilidad y detalle, cuando se requiere dimensionar la estructura del pavimento a partir de datos de tránsito, capacidad de soporte del suelo (MR) y niveles de confiabilidad exigidos por el mandante. También aplica en rehabilitación de pavimentos existentes, permitiendo verificar si el SN actual es suficiente para las cargas proyectadas.</p>
+
+
+
+<h2>Fórmula principal</h2>
+
+<div class="formula-box">log(W18) = Z<sub>R</sub>·S<sub>0</sub> + 9.36·log(SN+1) - 0.20 + (G<sub>t</sub>)/(0.40 + 1094/(SN+1)<sup>5.19</sup>) + 2.32·log(MR) - 8.07</div>
+
+
+
+<div class="vars-list">
+
+<strong>Variables:</strong>
+
+<ul><li>W18: número de ejes equivalentes de 80 kN (ESAL) en el período de diseño</li><li>Z<sub>R</sub>: desviación estándar normal para confiabilidad R</li><li>S<sub>0</sub>: desviación estándar total (0.4-0.5 para pavimentos flexibles)</li><li>SN: número estructural del pavimento (pulgadas)</li><li>MR: módulo resiliente del suelo de subrasante (psi)</li><li>G<sub>t</sub>: función de la pérdida de serviciabilidad ΔPSI</li></ul>
+
+</div>
+
+
+
+<h2>Ejemplo numérico</h2>
+
+<div class="ejemplo-box">Para un tránsito W18=5×10⁶ ESAL, MR=10,000 psi, confiabilidad R=90% (Z<sub>R</sub>=-1.282), S<sub>0</sub>=0.45 y ΔPSI=2.0, se obtiene SN≈5.2 pulg. Luego, con coeficientes estructurales a<sub>1</sub>=0.44 (carpeta), a<sub>2</sub>=0.14 (base), a<sub>3</sub>=0.11 (subbase), y drenajes m=1.0, se dimensionan espesores: carpeta=4.5 pulg, base=6 pulg, subbase=8 pulg.</div>
+
+
+
+<h2>Normativa aplicable</h2>
+
+<div class="normas-list">
+
+<ul><li>NCh 1508.Of2014 — Estudio de mecánica de suelos</li><li>NCh 433.Of2012 — Diseño sísmico de edificios</li><li>NCh 3171.Of2010 — Diseño estructural de pavimentos</li><li>DS61 MINVU — Ordenanza General de Urbanismo y Construcciones</li><li>AASHTO Guide for Design of Pavement Structures 1993</li></ul>
+
+</div>
+
+
+
+<h2>Consideraciones para proyectos en Chile</h2>
+
+<div class="consideraciones-box">En Chile, la alta sismicidad exige considerar la fatiga del pavimento y la licuación de suelos. Se recomienda usar un MR obtenido de ensayos triaxiales cíclicos, y ajustar la confiabilidad R según la importancia de la vía (R≥85% para autopistas). Además, en zonas cordilleranas o costeras, los espesores pueden requerir aumentos por condiciones de drenaje y heladas. La práctica local suele emplear bases granulares con CBR≥80% y carpeta asfáltica con penetración 60-70.</div>
+
+
+
+<h2>Limitaciones del método</h2>
+
+<div class="limitaciones-box">
+
+<ul><li>No considera efectos de fatiga térmica ni fisuración reflejada, comunes en climas extremos.</li><li>Asume condiciones de drenaje uniformes, no apto para suelos expansivos o con napa freática alta.</li><li>La ecuación empírica AASHTO 93 se calibró para condiciones de EE.UU.; requiere ajustes locales mediante correlaciones con normas chilenas.</li></ul>
+
+</div>
+
+
+
+<!-- CALC_EMBED_v1 -->
+
+<div class="calc-embed-wrap">
+
+<div class="calc-embed-intro"><strong>🧮 Calculadora interactiva:</strong> usá los inputs para obtener resultados al instante. Gratis, sin registro.</div>
+
+<div class="calc-split-layout">
+
+<section class="calc-widget" aria-label="Calculadora interactiva SN pavimento flexible AASHTO 93">
+
+<h2>Calcular en línea</h2>
+
+<p class="calc-intro">Resuelve iterativamente el número estructural SN según AASHTO 93 a partir del tráfico ESAL, MR de subrasante y parámetros de confiabilidad.</p>
+
+<form id="calc-form" novalidate>
+
+<div class="calc-row">
+
+<label>ESAL (×10⁶ ejes)<input type="number" id="esal" step="0.1" value="3.5" min="0.1" max="50" required></label>
+
+<label>MR subrasante (MPa)<input type="number" id="mr" step="1" value="55" min="10" max="500" required></label>
+
+<label>ZR (confiabilidad)<input type="number" id="zr" step="0.001" value="-1.282" min="-5" max="0" required></label>
+
+<label>So<input type="number" id="so" step="0.01" value="0.45" min="0.3" max="0.6" required></label>
+
+<label>ΔPSI<input type="number" id="dpsi" step="0.1" value="2.5" min="0.5" max="3" required></label>
+
+</div>
+
+<button type="submit">Calcular SN</button>
+
+</form>
+
+<div id="calc-resultado" role="status" aria-live="polite"></div>
+
+<p class="calc-note">Resolución por bisección. ZR por defecto = −1,282 (90 % confianza). Coeficientes estructurales sugeridos: a1=0,44 mezcla asfáltica; a2=0,14 base granular; a3=0,11 subbase.</p>
+
+</section>
+
+</div>
+
+</div>
+
+<style id="calc-embed-css-v1">.calc-embed-wrap{margin:32px 0;padding:0}.calc-embed-wrap .calc-split-layout{display:block}.calc-embed-wrap .calc-widget{margin:0}.calc-embed-wrap h2{margin-top:0;font-family:var(--font-h,inherit);color:var(--primary,#0A2540);font-size:1.35rem}.calc-embed-intro{background:#f0f9ff;border-left:4px solid #0d9488;padding:14px 20px;margin:0 0 16px;border-radius:4px;font-size:.95rem;color:#0c4a6e}.calc-embed-intro strong{color:#0d9488}</style>
+
+<style>
+
+.calc-widget{background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:1.25rem 1.5rem;margin:2rem 0;font-family:inherit}
+
+.calc-widget h2{margin:0 0 .5rem;font-size:1.15rem;color:#0f172a;border:0;padding:0}
+
+.calc-widget .calc-intro{margin:0 0 1rem;font-size:.88rem;color:#475569}
+
+.calc-widget .calc-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:.75rem;margin-bottom:1rem}
+
+.calc-widget label{display:flex;flex-direction:column;font-size:.82rem;color:#334155;font-weight:600}
+
+.calc-widget input,.calc-widget select{margin-top:.3rem;padding:.5rem .6rem;border:1px solid #cbd5e1;border-radius:6px;font-size:.92rem;font-family:inherit;background:#fff}
+
+.calc-widget input:focus,.calc-widget select:focus{outline:2px solid #0f766e;outline-offset:1px}
+
+.calc-widget button{background:#0f766e;color:#fff;border:0;padding:.6rem 1.4rem;border-radius:6px;font-weight:600;cursor:pointer;font-size:.92rem}
+
+.calc-widget button:hover{background:#115e59}
+
+.calc-widget #calc-resultado{margin-top:1rem;padding:.9rem 1rem;background:#fff;border-left:3px solid #0f766e;border-radius:4px;font-size:.92rem;min-height:1em}
+
+.calc-widget #calc-resultado:empty{display:none}
+
+.calc-widget #calc-resultado .ok{color:#166534;font-weight:700;font-size:1.02rem;display:block;margin-bottom:.3rem}
+
+.calc-widget #calc-resultado .err{color:#b91c1c;font-weight:600}
+
+.calc-widget .calc-note{margin:1rem 0 0;font-size:.78rem;color:#64748b;font-style:italic}
+
+</style>
+
+
+
+</div>
+
+</main>
+
+
+
+<footer>
+
+<div class="container">
+
+<p>&copy; 2026 Lab MS · <a href="/">Inicio</a> · <span>Blog sísmico</span> · <span>Blog geotécnico</span> · <a href="/calculadoras/">Calculadoras</a></p>
+
+<p style="font-size:.78rem;margin-top:8px;color:#94a3b8">Información con fines técnicos y educativos. Calculadora funcional alojada en Geotechnical Engineering AI.</p>
+
+</div>
+
+</footer>
+
+<script>
+
+(function(){
+
+var f=document.getElementById('calc-form');if(!f)return;
+
+function log10(x){return Math.log(x)/Math.LN10;}
+
+function aashtoSN(SN,ZR,So,dPSI,MRpsi){
+
+return ZR*So + 9.36*log10(SN+1) - 0.20 + log10(dPSI/(4.2-1.5))/(0.40+1094/Math.pow(SN+1,5.19)) + 2.32*log10(MRpsi) - 8.07;
+
+}
+
+f.addEventListener('submit',function(e){
+
+e.preventDefault();
+
+var esal=parseFloat(document.getElementById('esal').value);
+
+var mr=parseFloat(document.getElementById('mr').value);
+
+var zr=parseFloat(document.getElementById('zr').value);
+
+var so=parseFloat(document.getElementById('so').value);
+
+var dpsi=parseFloat(document.getElementById('dpsi').value);
+
+var out=document.getElementById('calc-resultado');
+
+if(!isFinite(esal)||!isFinite(mr)||!isFinite(zr)||!isFinite(so)||!isFinite(dpsi)||esal<=0||mr<=0||so<=0||dpsi<=0){out.innerHTML='<span class="err">Ingresa valores numéricos positivos.</span>';return;}
+
+var W18=esal*1e6;
+
+var target=log10(W18);
+
+var MRpsi=mr*145.04;
+
+var lo=1.0,hi=6.0,mid=0,diff=0,it=0;
+
+while(it<80){
+
+mid=(lo+hi)/2;
+
+diff=aashtoSN(mid,zr,so,dpsi,MRpsi)-target;
+
+if(Math.abs(diff)<1e-5)break;
+
+if(diff<0)lo=mid;else hi=mid;
+
+it++;
+
+}
+
+var SN=mid;
+
+var SNin=SN;
+
+var D1=Math.max(2,Math.ceil(SNin/0.44*0.35));
+
+var SN1=0.44*D1;
+
+var rem1=Math.max(0,SNin-SN1);
+
+var D2=Math.max(6,Math.ceil(rem1/0.14*0.55));
+
+var SN2=0.14*D2;
+
+var rem2=Math.max(0,SNin-SN1-SN2);
+
+var D3=Math.max(6,Math.ceil(rem2/0.11));
+
+out.innerHTML='<span class="ok">SN requerido = '+SN.toFixed(2).replace('.',',')+' · Espesores tentativos (a1=0,44 mezcla; a2=0,14 base; a3=0,11 subbase)</span>'+
+
+'Carpeta asfáltica D1 ≈ '+D1+' pulg ('+(D1*2.54).toFixed(1).replace('.',',')+' cm)<br>'+
+
+'Base granular D2 ≈ '+D2+' pulg ('+(D2*2.54).toFixed(1).replace('.',',')+' cm)<br>'+
+
+'Subbase D3 ≈ '+D3+' pulg ('+(D3*2.54).toFixed(1).replace('.',',')+' cm)<br>'+
+
+'W18 = '+W18.toExponential(2)+' ejes · MR = '+MRpsi.toFixed(0)+' psi<br>'+
+
+'<span style="color:#64748b;font-size:.85em">Sugerencia: ajustar D1-D3 a múltiplos constructivos y verificar SN total ≥ SN requerido</span>';
+
+});
+
+})();
+
+</script>
+
+</body>
+
+</html>
+
